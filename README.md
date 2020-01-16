@@ -1,24 +1,44 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column                | Type    | Options     |
+| --------------------- | ------- | ----------- |
+| e_mail                | string  | null: false |
+| nickname              | string  | null: false |
+| password              | string  | null: false |
+| password_conformation | string  | null: false |
 
-Things you may want to cover:
 
-* Ruby version
+### Association
+- has_many   :personals
+- has_many   :posts
 
-* System dependencies
+## personalsテーブル
 
-* Configuration
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| weight      | integer    | null: false                    |
+| height      | integer    | null: false                    |
+| age         | integer    | null: false                    |
+| poket_money | integer    | null: false                    |
+| month       | integer    | null: false                    |
+| user_id     | references | null: false, foreign_key: true |
 
-* Database creation
+### Association
+- belongs_to  :user 
 
-* Database initialization
+## postsテーブル
 
-* How to run the test suite
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| expence         | integer    | null: false                    |
+| total_expence   | integer    | null: false                    |
+| average_expence | integer    | null: false                    |
+| average_weight  | integer    | null: false                    |
+| latest_weight   | integer    | null: false                    |
+| gap_weight      | integer    | null: false                    |
+| text            | string     |                                |
+| user_id         | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to  :user 
 
-* Deployment instructions
-
-* ...
