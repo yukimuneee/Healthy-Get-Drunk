@@ -1,8 +1,9 @@
-@import "reset";
-@import "variables";
+@import "shared/reset";
+@import "shared/variables";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "slick-theme"; 
-@import "slick";
-@import "first_page";
-@import "index";
+@import "shared/slick-theme"; 
+@import "shared/slick";
+@import "personals/first_page";
+@import "users/index";
+@import "users/new";
