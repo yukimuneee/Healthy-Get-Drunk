@@ -41,20 +41,31 @@
       }
     }
     &__content{
+      box-sizing: content-box;
       height: 450px;
       width: 100%;
+      padding: 35px 175px 0 175px;
       &__inputbox{
         &__input{
+          box-sizing: content-box;
+          display: block;
+          font-size: 20px;
+          height: 50px;
+          width: 340px;
+          margin-bottom: 20px;
+          padding-left: 10px;
+        }
+        &__send{
           display: block;
           font-size: 20px;
           height: 50px;
           width: 350px;
-
-
-        }
-        &__send{
-          font-size: 20px;
-          height: 50px;
+          background-color: #AAAAAA;
+          cursor: pointer;
+          &:hover {
+            background-color: #0095EE;
+            color: #fff;
+          }
 
         }
       }

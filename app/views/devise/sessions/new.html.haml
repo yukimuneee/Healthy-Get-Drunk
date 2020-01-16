@@ -18,7 +18,7 @@
       = form_with model: @user, url: user_session_path, id: 'new_user', class: 'signin__box__content__inputbox', local: true do |f|
         = f.email_field :email, autofocus: true,class: "signin__box__content__inputbox__input",placeholder: "Mailaddress"
         = f.password_field :password, autocomplete: "off",class:"signin__box__content__inputbox__input",placeholder: "Password"
-        -# .signup__box__content__input
+        .signin__box__content__inputbox__input
         -#   = flash[:recaptcha_error]
         -#   = recaptcha_tags
         = f.submit "LOG IN", class: "signin__box__content__inputbox__send"
