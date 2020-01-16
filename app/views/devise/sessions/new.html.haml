@@ -1,17 +1,24 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.fheader
+  .fheader__titlebox
+    My Sake Diary
+  .fheader__button
+    = link_to "#", class: "fheader__button__loginbox" do
+      LOG IN
+    = link_to "#", class: "fheader__button__signupbox" do
+      SIGN UP
+.signin
+  -# .signin__head
+  .signin__box
+    .signin__box__header
+      .signin__box__header__text
+        Click here if you do not have an account
+      .signin__box__header__button
+        New Member Registration
+    .signin__box__content
+      = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
+        = f.email_field :email, autofocus: true,class: "signin__box__content__input",placeholder: "Mailaddress"
+        = f.password_field :password, autocomplete: "off",class:"signin__box__content__input",placeholder: "Password"
+        -# .signup__box__content__input
+        -#   = flash[:recaptcha_error]
+        -#   = recaptcha_tags
+        = f.submit "LOG IN", class: 'signin__box__content__send'
