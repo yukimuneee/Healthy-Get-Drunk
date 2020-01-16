@@ -8,17 +8,19 @@
       SIGN UP
 .fmain
   %ul.fmain__images
+    -# 1枚目のスライド
     %li
-      = image_tag "drink_craft_beer_glass.png",class: "fmain__images__image",id: "gazo1"
-      .fmain__images__text
-        .fmain__images__text__greeting1
-          Welcome To 
-        .fmain__images__text__greeting2
-          My Sake Diary
-    -# %li
-    -#   = image_tag "drink_craft_beer_bottle.png",class: "fmain__images__imaga",id: "gazo1"
-    -#   .fmain__images__description
-    -#     .fmain__images__description__text
-    -#       This service will dramatically change
-    -#       %br
-    -#       your drinking life
+      = image_tag "drink_craft_beer_glass.png", size:"600x300" ,class: "fmain__images__image",id: "gazo1"
+      .fmain__images__greeting1
+        Welcome To 
+      .fmain__images__greeting2
+        『My Sake Diary』
+    -# 2枚目のスライド
+    %li
+      = image_tag "drink_craft_beer_bottle.png", size:"300x200" ,class: "fmain__images__image",id: "gazo1"
+      .fmain__images__description1
+        This service will dramatically change
+      .fmain__images__description2
+        your drinking life
+
+

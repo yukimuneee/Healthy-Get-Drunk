@@ -4,9 +4,7 @@
   background-color: #EEEEEE;
   font-size: 16px;
   font-weight: 500;
-  box-shadow: 0px 6px 3px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0px 6px 3px rgba(0,0,0,0.6);
-  -moz-box-shadow: 0px 6px 3px rgba(0,0,0,0.6);
+  box-shadow:0px -8px 8px -1px #ccc inset;
   display: flex;
   justify-content: space-between;
   &__titlebox{
@@ -60,4 +58,50 @@
 .fmain{
   height: calc(100vh - 80px);
   width: 100vw;
+  background: radial-gradient(#F2B9A1, #EA6264);
+  &__images{
+    height: 440px;
+    width: 1000px;
+    margin: 0px auto;
+    padding-top: 160px;
+    position: relative;
+    &__image{
+      padding: 0 200px;
+
+    }
+    &__greeting1{
+      position: absolute;
+      top: 100px;
+      left: 0;
+      font-weight: 600;
+      font-size: 70px;
+      font-family: 'Caveat', cursive;
+    }
+    &__greeting2{
+      position: absolute;
+      bottom: 20px;
+      right: -100px;
+      font-weight: 600;
+      font-size: 70px;
+      font-family: 'Caveat', cursive;
+    }
+    
+    &__description1{
+      position: absolute;
+      top: 100px;
+      left: 0;
+      font-weight: 400;
+      font-size: 40px;
+      font-family: 'Caveat', cursive;
+    }
+    &__description2{
+      position: absolute;
+      top: 150px;
+      left: 0;
+      font-weight: 400;
+      font-size: 40px;
+      font-family: 'Caveat', cursive;
+    }
+  }
+
 }
