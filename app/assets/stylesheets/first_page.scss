@@ -2,52 +2,62 @@
   height: 80px;
   width: 100vw;
   background-color: #EEEEEE;
-  font-family: -apple-system, system-ui, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 6px 3px rgba(0,0,0,0.6);
   -webkit-box-shadow: 0px 6px 3px rgba(0,0,0,0.6);
   -moz-box-shadow: 0px 6px 3px rgba(0,0,0,0.6);
   display: flex;
-  justify-content: flex-end;
-  &__loginbox{
-    height: 40px;
-    width: 70px;
+  justify-content: space-between;
+  &__titlebox{
+    font-weight: 600;
+    margin: 20px 0 20px 50px;
     line-height: 40px;
-    margin: 20px 50px 20px 0;
-    border-radius: 5px;
-    border: #555555 solid 0.5px;
-    text-align: center;
-    text-decoration: none;
-    &:hover {
-      background: #0095EE;
-      color: #fff;
-    }
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    background: linear-gradient(transparent 60%, lightgreen 80%);
   }
-  a {
-    color: black;
-  }
-  &__signupbox{
-    height: 40px;
-    width: 70px;
-    line-height: 40px;
-    margin: 20px 50px 20px 0;
-    border-radius: 5px;
-    border: #555555 solid 0.5px;
-    text-align: center;
-    text-decoration: none;
-    &:hover {
-      background: #33CC66;
-      color: #fff;
+  &__button{
+    &__loginbox{
+      line-height: 80px;
+      padding: 8px;
+      text-decoration: none;
+      text-align: center;
+      margin-right: 40px;
+      border: solid 0.5px #CCCCCC;
+      border-radius: 5px;
+      background-color: #AAAAAA;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      &:hover {
+        background: #0095EE;
+        color: #fff;
+      }
     }
+    a {
+      color: black;
+    }
+    &__signupbox{
+      line-height: 80px;
+      padding: 8px;
+      text-decoration: none;
+      text-align: center;
+      margin-right: 40px;
+      border: solid 0.5px #CCCCCC;
+      border-radius: 5px;
+      background-color: #AAAAAA;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      &:hover {
+        background: #33CC66;
+        color: #fff;
+      }
 
-  }
-  a {
-    color: black;
+    }
+    a {
+      color: black;
+    }
   }
 }
 .fmain{
   height: calc(100vh - 80px);
   width: 100vw;
-  background-color: blue;
 }
