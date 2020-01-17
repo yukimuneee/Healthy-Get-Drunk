@@ -60,27 +60,29 @@
   width: 100vw;
   background: radial-gradient(#F2B9A1, #EA6264);
   &__images{
-    height: 440px;
-    width: 1000px;
+    height: 650px;
+    width: 1200px;
     margin: 0px auto;
-    padding-top: 160px;
+    padding-top: 60px;
     position: relative;
-    &__image{
-      padding: 0 200px;
-
+    &__image1{
+      padding: 90px 180px 0 250px;
+    }
+    &__image2{
+      padding: 300px 100px 100px 800px;
     }
     &__greeting1{
       position: absolute;
-      top: 100px;
-      left: 0;
+      top: 0px;
+      left: 50px;
       font-weight: 600;
       font-size: 70px;
       font-family: 'Caveat', cursive;
     }
     &__greeting2{
       position: absolute;
-      bottom: 20px;
-      right: -100px;
+      bottom: -140px;
+      right: 0px;
       font-weight: 600;
       font-size: 70px;
       font-family: 'Caveat', cursive;
@@ -88,16 +90,16 @@
     
     &__description1{
       position: absolute;
-      top: 100px;
-      left: 0;
+      top: 50px;
+      left: 100px;
       font-weight: 400;
       font-size: 40px;
       font-family: 'Caveat', cursive;
     }
     &__description2{
       position: absolute;
-      top: 150px;
-      left: 0;
+      top: 200px;
+      left: 100px;
       font-weight: 400;
       font-size: 40px;
       font-family: 'Caveat', cursive;
