@@ -37,30 +37,36 @@
       margin: 0 175px;
       &__single{
         &__top{
-
+          margin-top: 15px;
+          font-family: 'Caveat', cursive;
+          font-size: 16px;
         }
         &__input{
+          padding-left: 10px;
           height: 50px;
-          width: 350px;
+          width: 340px;
           line-height: 50px;
-          font-size: 20px;
+          font-size: 16px;
           font-family: 'Alegreya Sans SC', sans-serif;
         }
-
-      }
-      &__middle{
-
-      }
-      &__bottom{
-        &--password{
-
+        &__middle{
+          margin-bottom: 10px;
         }
-
+        &__bottom{
+          &--password{
+          }
+        }
+        &__button{
+          margin-top: 35px;
+          display: block;
+          font-size: 20px;
+          height: 50px;
+          width: 350px;
+          color: white;
+          background-color: #0095EE;
+          cursor: pointer;
+        }
       }
-      &__submit{
-
-      }
-
     }
   }
 }
