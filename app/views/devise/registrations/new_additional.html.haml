@@ -43,10 +43,10 @@
           Monthly Drinking Money
         .umain__content__single1__form
           .umain__content__single1__form__select1
-            = f.select :month, [["1"],["2"],["3"],["4"],["5"],["6"],["7"],["8"],["9"],["10"],["11"],["12"]],{}, {class: 'umain__content__single1__form__select1__box1'}
-            month
+            = f.select :month, [["January"],["February"],["March"],["April"],["May"],["June"],["July"],["August"],["September"],["October"],["November"],["December"]],{}, {class: 'umain__content__single1__form__select1__box1'}
           .umain__content__single1__form__select2
-            ¥
+            .umain__content__single1__form__select2__text
+              ¥
             = f.text_field :monthly_drinking_money, placeholder: "e.g.: 5,000", class: 'umain__content__single1__form__select2__box2'
 
 

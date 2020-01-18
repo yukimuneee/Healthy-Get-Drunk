@@ -47,6 +47,8 @@
       padding: 35px 175px 0 175px;
       &__inputbox{
         &__input{
+          border: none;
+          outline: none;
           box-sizing: content-box;
           display: block;
           font-size: 20px;

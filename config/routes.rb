@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     post 'additional',to:'users/registrations#create_additional'
     get 'done',to:'users/registrations#done'
   end
-    
+
   root to: 'personals#index'
 
   resources :personals do
