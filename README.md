@@ -14,14 +14,14 @@
 
 ## personalsテーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| weight      | integer    | null: false                    |
-| height      | integer    | null: false                    |
-| age         | integer    | null: false                    |
-| poket_money | integer    | null: false                    |
-| month       | integer    | null: false                    |
-| user_id     | references | null: false, foreign_key: true |
+| Column                 | Type       | Options                        |
+| ---------------------- | ---------- | ------------------------------ |
+| weight                 | integer    | null: false                    |
+| height                 | integer    | null: false                    |
+| age                    | integer    | null: false                    |
+| monthly drinking money | integer    | null: false                    |
+| month                  | text    | null: false                    |
+| user_id                | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to  :user 

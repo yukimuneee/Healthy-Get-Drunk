@@ -16,25 +16,25 @@
     .umain__title
       Please fill in the required items.
     .umain__content
-      = form_with model: @personal,url: {controller: 'registrations', action: 'create_additional' },class:"umain__content__single",local: true do |f|
-        .umain__content__single__top
+      = form_with model: @personal,url: {controller: 'registrations', action: 'create_additional' },class:"umain__content__single1",local: true do |f|
+        .umain__content__single1__top
           Nickname 
-        = f.text_field :nickname, placeholder: "e.g.: Sake Lover", class: 'umain__content__single__input'
+        = f.text_field :nickname, placeholder: "e.g.: Sake Lover", class: 'umain__content__single1__input'
 
-        .umain__content__single__top
+        .umain__content__single1__top
           Email address 
-        = f.text_field :email, placeholder: "e.g.: ○○○○○○@○○○○○○", class: 'umain__content__single__input'
+        = f.text_field :email, placeholder: "e.g.: ○○○○○○@○○○○○○", class: 'umain__content__single1__input'
 
-        .umain__content__single__top
+        .umain__content__single1__top
           Password 
-        = f.password_field :password, id: "js-password", placeholder: "7 or more half-width characters", class: 'umain__content__single__input'
+        = f.password_field :password, id: "js-password", placeholder: "7 or more half-width characters", class: 'umain__content__single1__input'
 
-        .umain__content__single__middle
+        .umain__content__single1__middle
           ※ Please set both alphabets and numbers
 
-        .umain__content__single__bottom
-          .umain__content__single__bottom--password
+        .umain__content__single1__bottom
+          .umain__content__single1__bottom--password
             %input#js-passcheck{type: "checkbox"}
             %label{for: "js-passcheck"} Show password
   
-        = f.submit "NEXT", class: 'umain__content__single__button'
+        = f.submit "NEXT", class: 'umain__content__single1__button'
