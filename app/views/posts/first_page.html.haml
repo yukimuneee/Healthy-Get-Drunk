@@ -1,10 +1,10 @@
 .fheader
-  = link_to first_page_personals_path, class: "fheader__titlebox" do
+  .fheader__titlebox
     My Sake Diary
   .fheader__button
-    = link_to "#", class: "fheader__button__loginbox" do
+    = link_to new_user_session_path, class: "fheader__button__loginbox" do
       LOG IN
-    = link_to "#", class: "fheader__button__signupbox" do
+    = link_to index_path, class: "fheader__button__signupbox" do
       SIGN UP
 .fmain
   %ul.fmain__images
@@ -22,5 +22,3 @@
         This service will dramatically change
       .fmain__images__description2
         your drinking life
-
-

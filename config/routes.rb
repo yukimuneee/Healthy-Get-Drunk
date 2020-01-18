@@ -9,9 +9,9 @@ Rails.application.routes.draw do
     get 'done',to:'users/registrations#done'
   end
 
-  root to: 'personals#index'
+  root to: 'posts#index'
 
-  resources :personals do
+  resources :posts do
     collection do
       get 'first_page'
       get 'index'
