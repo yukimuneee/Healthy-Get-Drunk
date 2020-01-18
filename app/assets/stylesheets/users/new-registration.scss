@@ -18,6 +18,68 @@
     a {
       color: black;
     }
+    &__right{
+      font-family: 'Caveat', cursive;
+      display: flex;
+      width: 700px;
+      margin: 0 auto;
+      position: relative;
+      &__1{
+        width: 140px;
+        color: #ea352d;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        &::after{
+          content: "";
+          background-color:#ea352d;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 60px;
+        }
+      }
+      &__2{
+        width: 160px;
+        position: absolute;
+        top: 15px;
+        left: 270px;
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 530px;
+          border-bottom: solid 2px black;
+          position: absolute;
+          left: -190px;
+          bottom: 10px;
+        }
+        &::after{
+          content: "";
+          background-color:black;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 75px;
+        }
+      }
+      &__3{
+        width: 40px;
+        position: absolute;
+        top: 15px;
+        right: 65px;
+        &::after{
+          content: "";
+          background-color:black;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
   }
   .umain{
     height: 550px;
