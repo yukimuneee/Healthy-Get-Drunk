@@ -16,11 +16,11 @@
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
-| weight                 | integer    | null: false                    |
-| height                 | integer    | null: false                    |
+| height                 | string     | null: false                    |
+| weight                 | string     | null: false                    |
 | age                    | integer    | null: false                    |
 | monthly drinking money | integer    | null: false                    |
-| month                  | text    | null: false                    |
+| month                  | string     | null: false                    |
 | user_id                | references | null: false, foreign_key: true |
 
 ### Association
