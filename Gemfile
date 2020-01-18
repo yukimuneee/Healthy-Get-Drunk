@@ -67,3 +67,4 @@ gem "font-awesome-sass"
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'recaptcha', require: "recaptcha/rails"
+gem 'active_hash'

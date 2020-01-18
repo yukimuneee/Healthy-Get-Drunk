@@ -1,0 +1,116 @@
+.user-new{
+  .uheader{
+    &__right{
+      &__11{
+        width: 140px;
+        color: #ea352d;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 270px;
+          border-bottom: solid 2px #ea352d;
+          position: absolute;
+          left: 70px;
+          bottom: 10px;
+        }
+        &::after{
+          content: "";
+          background-color:#ea352d;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 60px;
+        }
+      }
+      &__21{
+        color: #ea352d;
+        width: 160px;
+        position: absolute;
+        top: 15px;
+        left: 270px;
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 265px;
+          border-bottom: solid 2px black;
+          position: absolute;
+          left: 85px;
+          bottom: 10px;
+        }
+        &::after{
+          content: "";
+          background-color:#ea352d;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 75px;
+        }
+      }
+    }
+  }
+  .umain{
+    &__content{
+      &__single1{
+        &__top{
+          margin-top: 15px;
+          font-family: 'Caveat', cursive;
+          font-size: 16px;
+        }
+        &__form{
+          display: flex;
+          &__input{
+            padding-left: 10px;
+            height: 50px;
+            width: 170px;
+            line-height: 50px;
+            font-size: 16px;
+            font-family: 'Alegreya Sans SC', sans-serif;
+          }
+          &__text{
+            line-height: 50px;
+            margin-left: 15px;
+            font-size: 22px;
+            font-family: 'Caveat', cursive;
+
+          }
+          &__input1{
+            padding-left: 10px;
+            height: 50px;
+            width: 184px;
+            line-height: 50px;
+            font-size: 16px;
+            font-family: 'Alegreya Sans SC', sans-serif;
+          }
+          &__select1{
+            height: 50px;
+            &__box1{
+              height: 50px;
+            }
+          }
+          &__select2{
+            height: 50px;
+            &__box2{
+              height: 50px;
+              
+            }
+          }
+        }
+        &__button{
+          margin-top: 35px;
+          display: block;
+          font-size: 20px;
+          height: 50px;
+          width: 350px;
+          color: white;
+          background-color: #0095EE;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
