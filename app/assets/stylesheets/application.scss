@@ -2,9 +2,11 @@
 @import "shared/variables";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "shared/slick-theme"; 
 @import "shared/slick";
+@import "shared/slick-theme"; 
 @import "personals/first_page";
 @import "users/index";
-@import "users/new-sesson";
-@import "users/new-registration";
+@import "users/new-session";
+@import "users/new_registration";
+@import "users/new_additional";
+@import "users/done";

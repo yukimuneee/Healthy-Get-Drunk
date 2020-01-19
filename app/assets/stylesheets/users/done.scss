@@ -1,0 +1,75 @@
+.user-new{
+  .uheader{
+    &__right{
+      &__22{
+        color: #ea352d;
+        width: 160px;
+        position: absolute;
+        top: 15px;
+        left: 270px;
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 530px;
+          border-bottom: solid 2px #ea352d;
+          position: absolute;
+          left: -190px;
+          bottom: 10px;
+        }
+        &::after{
+          content: "";
+          background-color:#ea352d;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 75px;
+        }
+      }
+      &__31{
+        color: #ea352d;
+        width: 40px;
+        position: absolute;
+        top: 15px;
+        right: 65px;
+        &::after{
+          content: "";
+          background-color:#ea352d;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .umain{
+    &__complete{
+      height: 200px;
+      margin-bottom: 350px;
+      position: relative;
+      &__done{
+        position: absolute;
+        top: 75px;
+        right: 175px;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        height: 50px;
+        width: 350px;
+        background-color: #AAAAAA;
+        cursor: pointer;
+        &:hover {
+          background-color: #33CC66;
+          color: #fff;
+        }
+      }
+      a {
+        color: black;
+      }
+    }
+  }
+}

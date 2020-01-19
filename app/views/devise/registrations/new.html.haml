@@ -1,1 +1,41 @@
+.user-new
+  .uheader
+    = link_to first_page_posts_path, class:"uheader__text" do
+      My Sake Diary
+    %ul.uheader__right
+      %li.uheader__right__1
+        Member information
+        .uheader__right__1--line
+      %li.uheader__right__2
+        Additional Information
+        .uheader__right__2--line2
+      %li.uheader__right__3
+        Done
+        .uheader__right__3--line3
 
+  .umain
+    .umain__title
+      Please fill in the required items.
+    .umain__content
+      = form_with model: @user,url: {controller: 'registrations', action: 'create' },class:"umain__content__single",local: true do |f|
+        .umain__content__single__top
+          Nickname 
+        = f.text_field :nickname, placeholder: "e.g.: Sake Lover", class: 'umain__content__single__input'
+
+        .umain__content__single__top
+          Email address 
+        = f.text_field :email, placeholder: "e.g.: ○○○○○○@○○○○○○", class: 'umain__content__single__input'
+
+        .umain__content__single__top
+          Password 
+        = f.password_field :password, id: "js-password", placeholder: "7 or more half-width characters", class: 'umain__content__single__input'
+
+        .umain__content__single__middle
+          ※ Please set both alphabets and numbers
+
+        .umain__content__single__bottom
+          .umain__content__single__bottom--password
+            %input#js-passcheck{type: "checkbox"}
+            %label{for: "js-passcheck"} Show password
+  
+        = f.submit "NEXT", class: 'umain__content__single__button'

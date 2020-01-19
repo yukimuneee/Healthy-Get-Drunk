@@ -2,9 +2,9 @@
   .fheader__titlebox
     My Sake Diary
   .fheader__button
-    = link_to "#", class: "fheader__button__loginbox" do
+    = link_to new_user_session_path, class: "fheader__button__loginbox" do
       LOG IN
-    = link_to "#", class: "fheader__button__signupbox" do
+    = link_to index_path, class: "fheader__button__signupbox" do
       SIGN UP
 .signin
   .signin__head
@@ -12,7 +12,7 @@
     .signin__box__header
       .signin__box__header__text
         Click here if you do not have an account
-      = link_to "", class: "signin__box__header__button" do
+      = link_to index_path, class: "signin__box__header__button" do
         New Member Registration
     .signin__box__content
       = form_with model: @user, url: user_session_path, id: 'new_user', class: 'signin__box__content__inputbox', local: true do |f|

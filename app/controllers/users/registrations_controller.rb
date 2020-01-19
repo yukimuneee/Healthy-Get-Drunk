@@ -1,62 +1,91 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
 
-  # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def index
+  end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+  def new
+      @user = User.new
+  end
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def create
+      session[:nickname] = user_params[:nickname]
+      session[:email] = user_params[:email]
+      session[:password] = user_params[:password] 
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+      @user = User.new(
+        nickname: session[:nickname],
+        email: session[:email],
+        password: session[:password],
+      )
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+      check_user_valid = @user.valid?
+      unless check_user_valid
+        render :new
+      else
+        session[:through_first_valid] = "through_first_valid"
+        redirect_to additional_path
+      end
+  end
 
-  # GET /resource/cancel
-  # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
-  # cancel oauth signing in/up in the middle of the process,
-  # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
+  def new_additional
+      @user = User.new
+      @personal = Personal.new
+  end
 
-  # protected
+  def create_additional
+      session[:height] = personal_params[:height]
+      session[:weight] = personal_params[:weight]
+      session[:age] = personal_params[:age] 
+      session[:month] = personal_params[:month] 
+      session[:monthly_drinking_money] = personal_params[:monthly_drinking_money] 
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
+      @user = User.new(
+        nickname: session[:nickname],
+        email: session[:email],
+        password: session[:password],
+      )
+      @user.save 
+      
+      @personal = Personal.new(
+        height: session[:height],
+        weight: session[:weight],
+        age: session[:age],
+        month: session[:month],
+        monthly_drinking_money: session[:monthly_drinking_money]
+      )
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+      if @personal.save
+        reset_session
+        session[:id] = @user.id
+        redirect_to done_path
+        return 
+      else
+        reset_session
+        render :new_additional
+      end
+  end
 
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def done
+      unless session[:id]
+        redirect_to root_path 
+        return
+      end
+      sign_in User.find(session[:id])
+  end
 
-  # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  private
+    
+  def user_params
+      params.require(:user).permit(:nickname, :email, :password)
+  end
+
+  def personal_params
+      params.require(:personal).permit(:height, :weight, :age, :month, :monthly_drinking_money)
+  end
+
+  def redirect_to_index_from_sms
+      redirect_to signup_index_path unless session[:through_first_valid].present? && session[:through_first_valid] == "through_first_valid"
+  end
 end

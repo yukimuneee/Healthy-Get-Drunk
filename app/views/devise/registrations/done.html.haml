@@ -1,0 +1,18 @@
+.user-new
+  .uheader
+    = link_to first_page_posts_path, class:"uheader__text" do
+      My Sake Diary
+    %ul.uheader__right
+      %li.uheader__right__1
+        Member information
+        .uheader__right__1--line
+      %li.uheader__right__22
+        Additional Information
+        .uheader__right__22--line2
+      %li.uheader__right__31
+        Done
+        .uheader__right__31--line3
+  .umain
+    .umain__complete
+      = link_to root_path, class: "umain__complete__done" do
+        COMPLETE

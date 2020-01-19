@@ -1,0 +1,142 @@
+.user-new{
+  width: 100vw;
+  padding-bottom: 90px;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  .uheader{
+    height: 150px;
+    width: 100%;
+    &__text{
+      margin: 0 auto;
+      width: 190px;
+      padding-top: 20px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Caveat', cursive;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    a {
+      color: black;
+    }
+    &__right{
+      font-family: 'Caveat', cursive;
+      display: flex;
+      width: 700px;
+      margin: 0 auto;
+      position: relative;
+      &__1{
+        width: 140px;
+        color: #ea352d;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        &::after{
+          content: "";
+          background-color:#ea352d;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 60px;
+        }
+      }
+      &__2{
+        width: 160px;
+        position: absolute;
+        top: 15px;
+        left: 270px;
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 530px;
+          border-bottom: solid 2px black;
+          position: absolute;
+          left: -190px;
+          bottom: 10px;
+        }
+        &::after{
+          content: "";
+          background-color:black;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 75px;
+        }
+      }
+      &__3{
+        width: 40px;
+        position: absolute;
+        top: 15px;
+        right: 65px;
+        &::after{
+          content: "";
+          background-color:black;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 5px;
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .umain{
+    width: 700px;
+    margin: 0 auto;
+    background-color:rgba(255,255,255,0.8);
+    border-radius: 5px;
+    &__title{
+      font-size: 22px;
+      font-weight: 600;
+      padding: 32px;
+      font-family: 'Caveat', cursive;
+      text-align: center;
+      border-bottom: solid 0.1px #CCCCCC;
+    }
+    &__content{
+      margin: 0 175px;
+      padding-bottom: 100px;
+      &__single{
+        &__top{
+          margin: 15px 0 5px;
+          font-family: 'Caveat', cursive;
+          font-size: 16px;
+        }
+        &__input{
+          border: none;
+          outline: none;
+          padding-left: 10px;
+          height: 46px;
+          width: 336px;
+          line-height: 50px;
+          font-size: 16px;
+          font-family: 'Alegreya Sans SC', sans-serif;
+        }
+        &__middle{
+          margin-bottom: 10px;
+        }
+        &__bottom{
+          &--password{
+          }
+        }
+        &__button{
+          margin-top: 35px;
+          display: block;
+          font-size: 20px;
+          height: 50px;
+          width: 350px;
+          color: white;
+          background-color: #0095EE;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
