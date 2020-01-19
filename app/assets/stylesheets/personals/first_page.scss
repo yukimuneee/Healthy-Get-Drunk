@@ -8,12 +8,16 @@
   display: flex;
   justify-content: space-between;
   &__titlebox{
+    text-decoration: none;
     font-weight: 600;
     margin: 20px 0 20px 50px;
     line-height: 40px;
     font-family: 'Caveat', cursive;
     font-size: 30px;
     background: linear-gradient(transparent 60%, lightgreen 80%);
+  }
+  a {
+    color: black;
   }
   &__button{
     &__loginbox{
@@ -60,6 +64,10 @@
   width: 100vw;
   background: radial-gradient(#F2B9A1, #EA6264);
   &__images{
+    text-decoration: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     height: 650px;
     width: 1200px;
     margin: 0px auto;

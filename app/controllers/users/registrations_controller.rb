@@ -48,7 +48,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       )
       @user.save 
       
-      @personal = Personale.new(
+      @personal = Personal.new(
         height: session[:height],
         weight: session[:weight],
         age: session[:age],
@@ -63,7 +63,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         return 
       else
         reset_session
-        redirect_to new_path
+        render :new_additional
       end
   end
 
@@ -85,7 +85,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       params.require(:personal).permit(:height, :weight, :age, :month, :monthly_drinking_money)
   end
 
-  # 前のpostアクションで定義されたsessionがなかった場合登録ページトップへリダイレクト
   def redirect_to_index_from_sms
       redirect_to signup_index_path unless session[:through_first_valid].present? && session[:through_first_valid] == "through_first_valid"
   end

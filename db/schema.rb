@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_01_18_043619) do
     t.string "height", null: false
     t.string "weight", null: false
     t.integer "age", null: false
-    t.integer "month", null: false
-    t.integer "monthly_drinking_money", null: false
+    t.string "month", null: false
+    t.string "monthly_drinking_money", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
