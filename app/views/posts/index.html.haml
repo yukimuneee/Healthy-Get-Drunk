@@ -1,16 +1,13 @@
 .main
   .header
-    .header__title
-      = link_to "", class: "header__title__link" do
-        My Sake Diary
-    .header__searchbox
-      = form_with(url: root_path, local: true, method: :get, class: "header__searchbox__search") do |f|
-        = f.text_field :keyword, class: "header__searchbox__search__form"
-        %button.header__searchbox__search__button
-          %i.fas.fa-search
-    .header__logout
-      = link_to "", class: ".header__logout__button" do
-        LOG OUT
+    = link_to "", class: "header__title" do
+      My Sake Diary
+    = form_with(url: root_path, local: true, method: :get, class: "header__search") do |f|
+      = f.text_field :keyword, class: "header__search__form"
+      %button.header__search__button
+        %i.fas.fa-search
+    = link_to "", class: "header__logout" do
+      LOG OUT
   .content1
     .content1__data1
       .content1__data1__title
