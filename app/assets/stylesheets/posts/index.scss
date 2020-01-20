@@ -113,16 +113,24 @@
           padding: 15px 15px 5px;
           background-color: white;
           border-radius: 4px;
+          height: 100%;
           &__title{
-            height: 30px;
+            padding-bottom: 5px;
             font-size: 25px;
+            margin: 0 20px;
           }
           &__value{
             display: flex;
-            padding: 5px 10px 5px;
             &__variable{
+              color: brown;
+              font-size: 25px;
+              padding-top: 5px;
+              margin-left: 25px;
             }
             &__unit{
+              font-size: 25px;
+              margin-left: 10px;
+              padding-top: 5px;
 
             }
           }
@@ -132,24 +140,33 @@
         display: flex;
         justify-content: space-between;
         height: 80px;
-        margin: 20px 50px 0;
+        margin: 80px 50px 0;
         &__box{
           box-shadow: 0 0 8px gray;
           background-color: white;
           border-radius: 4px;
           height: 100%;
+          padding: 15px;
           &__title{
             height: 30px;
             font-size: 25px;
+            margin-left: 30px;
+
           }
           &__value{
             display: flex;
             height: 50px;
             &__variable{
-
+              color: brown;
+              font-size: 25px;
+              margin-left: 25px;
+              margin-right: 10px;
+              padding-top: 15px;
             }
             &__unit{
-
+              color: brown;
+              font-size: 25px;
+              padding-top: 15px;
             }
           }
         }
@@ -157,18 +174,32 @@
           box-shadow: 0 0 8px gray;
           background-color: white;
           border-radius: 4px;
+          height: 100%;
+          padding: 15px;
           &__title{
             height: 30px;
             font-size: 25px;
           }
           &__value{
+            
             display: flex;
             height: 50px;
             &__1{
+              color: brown;
+              font-size: 25px;
+              padding-top: 15px;
+              margin-left: 20px;
             }
             &__2{
+              font-size: 25px;
+              padding-top: 15px;
+              margin-left: 20px;
             }
             &__3{
+              color: brown;
+              font-size: 25px;
+              padding-top: 15px;
+              margin-left: 10px
             }
           }
         }
