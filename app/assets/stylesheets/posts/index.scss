@@ -77,11 +77,12 @@
     display: flex;
     &__data1{
       width: calc(100vw - 50%);
+      background-color: #CCFFFF;
       &__title{
         display: flex;
         justify-content: space-between;
         height: 60px;
-        background-color: #CCFFFF;
+        border-bottom: dashed 2px #5b8bd0;
         &__text{
           margin-left: 50px;
           line-height: 60px;
@@ -102,13 +103,18 @@
         }
       }
       &__userdata1{
+        margin-top: 10px;
         display: flex;
         justify-content: space-between;
+        height: 80px;
         &__box{
+          background-color: white;
+            border-radius: 4px;
           &__title{
 
           }
           &__value{
+            display: flex;
             &__variable{
 
             }
@@ -121,11 +127,19 @@
       &__userdata2{
         display: flex;
         justify-content: space-between;
+        height: 80px;
         &__box{
+          background-color: white;
+          border-radius: 4px;
+          height: 100%;
           &__title{
+            height: 30px;
+
 
           }
           &__value{
+            display: flex;
+            height: 50px;
             &__variable{
 
             }
@@ -135,9 +149,15 @@
           }
         }
         &__box2{
+          background-color: white;
+          border-radius: 4px;
           &__title{
+            height: 30px;
+            
           }
           &__value{
+            display: flex;
+            height: 50px;
             &__1{
             }
             &__2{
@@ -150,9 +170,10 @@
     }
     &__data2{
       width: calc(100vw - 50%);
+      background-color: #FFFFCC	;
       &__title{
         height: 60px;
-        background-color: #FFFFCC	;
+        border-bottom: dashed 2px #FFCC66;
         &__text{
           margin-left: 50px;
           line-height: 60px;
@@ -163,10 +184,19 @@
         }
       }
       &__result1{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        margin-top: 10px;
         &__box{
+          background-color: white;
+          border-radius: 4px;
+          height: 100%;
           &__title{
+            height: 30px;
           }
           &__value{
+            display: flex;
             &__variable{
             }
             &__unit{
@@ -175,10 +205,18 @@
         }
       }
       &__result2{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
         &__box{
+          background-color: white;
+          border-radius: 4px;
+          height: 100%;
           &__title{
+            height: 30px;
           }
           &__value{
+            display: flex;
             &__variable{
             }
             &__unit{
