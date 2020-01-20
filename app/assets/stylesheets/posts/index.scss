@@ -76,6 +76,7 @@
   .content1{
     display: flex;
     &__data1{
+      padding-bottom: 50px;
       width: calc(100vw - 50%);
       background-color: #CCFFFF;
       &__title{
@@ -103,20 +104,23 @@
         }
       }
       &__userdata1{
-        margin-top: 10px;
         display: flex;
         justify-content: space-between;
         height: 80px;
+        margin: 20px 50px 0;
         &__box{
+          box-shadow: 0 0 8px gray;
+          padding: 15px 15px 5px;
           background-color: white;
-            border-radius: 4px;
+          border-radius: 4px;
           &__title{
-
+            height: 30px;
+            font-size: 25px;
           }
           &__value{
             display: flex;
+            padding: 5px 10px 5px;
             &__variable{
-
             }
             &__unit{
 
@@ -128,14 +132,15 @@
         display: flex;
         justify-content: space-between;
         height: 80px;
+        margin: 20px 50px 0;
         &__box{
+          box-shadow: 0 0 8px gray;
           background-color: white;
           border-radius: 4px;
           height: 100%;
           &__title{
             height: 30px;
-
-
+            font-size: 25px;
           }
           &__value{
             display: flex;
@@ -149,11 +154,12 @@
           }
         }
         &__box2{
+          box-shadow: 0 0 8px gray;
           background-color: white;
           border-radius: 4px;
           &__title{
             height: 30px;
-            
+            font-size: 25px;
           }
           &__value{
             display: flex;
@@ -171,6 +177,7 @@
     &__data2{
       width: calc(100vw - 50%);
       background-color: #FFFFCC	;
+      padding-bottom: 50px;
       &__title{
         height: 60px;
         border-bottom: dashed 2px #FFCC66;
@@ -187,19 +194,29 @@
         display: flex;
         justify-content: space-between;
         height: 80px;
-        margin-top: 10px;
+        margin: 20px 50px 0;
         &__box{
+          box-shadow: 0 0 8px gray;
           background-color: white;
           border-radius: 4px;
           height: 100%;
+          padding: 15px 15px 5px;
           &__title{
-            height: 30px;
+            font-size: 25px;
+            padding-bottom: 5px;
           }
           &__value{
             display: flex;
             &__variable{
+              color: brown;
+              margin-left: 50px;
+              font-size: 25px;
+              padding-top: 5px;
             }
             &__unit{
+              margin-left: 10px;
+              font-size: 25px;
+              padding-top: 5px;
             }
           }
         }
@@ -208,18 +225,29 @@
         display: flex;
         justify-content: space-between;
         height: 80px;
+        margin: 80px 50px 0;
         &__box{
+          box-shadow: 0 0 8px gray;
           background-color: white;
           border-radius: 4px;
           height: 100%;
+          padding: 15px;
           &__title{
             height: 30px;
+            font-size: 25px;
           }
           &__value{
             display: flex;
             &__variable{
+              margin-left: 90px;
+              margin-right: 10px;
+              font-size: 25px;
+              padding-top: 15px;
             }
             &__unit{
+              color: brown;
+              font-size: 25px;
+              padding-top: 15px;
             }
           }
         }
