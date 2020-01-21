@@ -29,13 +29,13 @@
             Nickname
           .content1__data1__userdata1__box__value
             .content1__data1__userdata1__box__value__variable
-              sake Lover
+              = current_user.nickname
         .content1__data1__userdata1__box
           .content1__data1__userdata1__box__title
             Height
           .content1__data1__userdata1__box__value
             .content1__data1__userdata1__box__value__variable
-              175
+              = current_user.personal.height
             .content1__data1__userdata1__box__value__unit
               cm
         .content1__data1__userdata1__box
@@ -43,7 +43,7 @@
             Weight
           .content1__data1__userdata1__box__value
             .content1__data1__userdata1__box__value__variable
-              65
+              = current_user.personal.weight
             .content1__data1__userdata1__box__value__unit
               kg
       .content1__data1__userdata2
@@ -52,7 +52,7 @@
             Age
           .content1__data1__userdata2__box__value
             .content1__data1__userdata2__box__value__variable
-              20
+              = current_user.personal.age
             .content1__data1__userdata2__box__value__unit
               years old
         .content1__data1__userdata2__box2
@@ -60,11 +60,11 @@
             Monthly Drinking Money
           .content1__data1__userdata2__box2__value
             .content1__data1__userdata2__box2__value__1
-              January
+              = current_user.personal.month
             .content1__data1__userdata2__box2__value__2
               ¥
             .content1__data1__userdata2__box2__value__3
-              3000
+              = current_user.personal.monthly_drinking_money
     .content1__data2
       .content1__data2__title
         .content1__data1__title__text
