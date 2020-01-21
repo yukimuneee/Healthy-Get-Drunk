@@ -1,5 +1,5 @@
 class Personal < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
 
   HEIGHT_WEIGHT_VALIDATION = /\A[-]?[0-9]+(\.[0-9]+)?\z/
   MONTHLY_DRINKING_MONEY_VALIDATION = /\A[-]?[0-9]+(\,[0-9]+)?\z/

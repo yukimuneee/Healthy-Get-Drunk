@@ -1,6 +1,6 @@
 .user-new
   .uheader
-    = link_to first_page_posts_path, class:"uheader__text" do
+    = link_to first_page_posts_path, class:"uheader__text", data: {turbolinks: false}  do
       My Sake Diary
     %ul.uheader__right
       %li.uheader__right__1
@@ -14,5 +14,5 @@
         .uheader__right__31--line3
   .umain
     .umain__complete
-      = link_to root_path, class: "umain__complete__done" do
+      = link_to root_path, class: "umain__complete__done", data: {turbolinks: false}  do
         COMPLETE
