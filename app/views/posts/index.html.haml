@@ -1,6 +1,6 @@
 .main
   .header
-    = link_to "", class: "header__title" do
+    = link_to root_path, class: "header__title", data: {turbolinks: false}  do
       My Sake Diary
     = form_with(url: root_path, local: true, method: :get, class: "header__search") do |f|
       = f.text_field :keyword, class: "header__search__form"

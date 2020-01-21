@@ -49,6 +49,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       @user.save 
       
       @personal = Personal.new(
+        user: @user,
         height: session[:height],
         weight: session[:weight],
         age: session[:age],

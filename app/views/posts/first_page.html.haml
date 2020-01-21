@@ -1,8 +1,8 @@
 .fheader
-  = link_to first_page_posts_path, class: "fheader__titlebox" do
+  = link_to first_page_posts_path, class: "fheader__titlebox", data: {turbolinks: false}  do
     My Sake Diary
   .fheader__button
-    = link_to new_user_session_path, class: "fheader__button__loginbox" do
+    = link_to new_user_session_path, class: "fheader__button__loginbox", data: {turbolinks: false} do
       LOG IN
     = link_to index_path, class: "fheader__button__signupbox" do
       SIGN UP

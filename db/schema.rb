@@ -32,10 +32,9 @@ ActiveRecord::Schema.define(version: 2020_01_18_043619) do
     t.integer "latest_weight", null: false
     t.integer "gap_weight", null: false
     t.integer "text"
-    t.bigint "user_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,5 +51,4 @@ ActiveRecord::Schema.define(version: 2020_01_18_043619) do
   end
 
   add_foreign_key "personals", "users"
-  add_foreign_key "posts", "users"
 end

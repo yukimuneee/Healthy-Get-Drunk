@@ -8,7 +8,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.integer     :latest_weight , null: false
       t.integer     :gap_weight, null: false
       t.integer     :text 
-      t.references  :user, foreign_key: true
+      t.integer     :user_id, foreign_key: true
       t.timestamps
     end
   end
