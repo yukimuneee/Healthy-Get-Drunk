@@ -21,7 +21,7 @@
       .content1__data1__title
         .content1__data1__title__text
           Your Basic Data
-        .content1__data1__title__edit
+        = link_to edit_user_path(current_user.id), class: "content1__data1__title__edit", data: {turbolinks: false}  do
           Edit
       .content1__data1__userdata1
         .content1__data1__userdata1__box

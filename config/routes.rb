@@ -17,4 +17,5 @@ Rails.application.routes.draw do
       get 'index'
     end
   end
+  resources :users, only: [:edit,:update]
 end
