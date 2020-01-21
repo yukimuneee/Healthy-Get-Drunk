@@ -7,8 +7,15 @@
       %button.header__search__button
         %i.fas.fa-search
     .header__button
-      = link_to "", class: "header__button__logout" do
-        LOG OUT
+      %button#modal-open-btn LOG OUT
+      = link_to "", destroy_user_session_path, method: :delete, id: 'item-delete-btn'
+      #overlay
+        #modalWindow
+          .modal-message-box
+            %div confirmation 
+            %div Are you sure you want to log out?
+          %button#modal-close-btn CANCEL
+          %button#delete-comformation-btn LOG OUT
   .content1
     .content1__data1
       .content1__data1__title
@@ -98,3 +105,4 @@
               2000
 
   .content2
+    #calendar

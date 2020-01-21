@@ -53,12 +53,12 @@
       }
     }
     &__button{
-      &__logout{
-        line-height: 80px;
+      #modal-open-btn{
+        font-size: 16px;
         padding: 8px;
         text-decoration: none;
         text-align: center;
-        margin-right: 40px;
+        margin: 22px 40px 22px 0px;
         border: solid 0.5px #CCCCCC;
         border-radius: 5px;
         background-color: #AAAAAA;
@@ -68,9 +68,7 @@
           color: #fff;
         }
       }
-      a {
-        color: black;
-      }
+      
     }
   }
   .content1{
@@ -290,7 +288,8 @@
 
 
   .content2{
-
+    padding: 100px;
+    background-color: lightgoldenrodyellow;
   }
 
 }
