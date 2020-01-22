@@ -1,4 +1,6 @@
 .content-edit{
+  box-shadow: 0 0 8px gray;
+  border-radius: 4px;
   width: calc(100vw - 50%);
   background-color: #CCFFFE;
   margin: 50px auto 0;
@@ -20,6 +22,8 @@
         font-size: 30px;
       }
       &__2{
+        font-size: 20px;
+        border-radius: 4px;
         border: none;
         outline: none;
         height: 48px;
@@ -37,10 +41,15 @@
             font-size: 30px;
           }
           &__2{
+            width: 160px;
+            font-size: 20px;
+            border-radius: 4px;
             border: none;
             outline: none;
-
-           
+          }
+          &__unit{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
           }
         }
         &__Weight{
@@ -52,9 +61,17 @@
             font-size: 30px;
           }
           &__2{
+            
+            width: 160px;
+            font-size: 20px;
+            border-radius: 4px;
             border: none;
-          outline: none;
+            outline: none;
             margin-bottom: 30px;
+          }
+          &__unit{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
           }
         }
         &__Age{
@@ -67,9 +84,16 @@
             
           }
           &__2{
+            
+            font-size: 20px;
+            border-radius: 4px;
             border: none;
             outline: none;
             width: 170px;
+          }
+          &__unit{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
           }
         }
         &__Montly{
@@ -86,12 +110,16 @@
             margin-bottom: 70px;
             padding-bottom: 60px;
             &__1{
+              border-radius: 4px;
               border: none;
               outline: none;
             }
             &__2{
+              font-size: 30px;
             }
             &__3{
+              font-size: 20px;
+              border-radius: 4px;
               border: none;
               outline: none;
             }
