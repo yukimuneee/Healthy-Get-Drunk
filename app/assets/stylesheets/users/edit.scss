@@ -1,0 +1,103 @@
+.content-edit{
+  width: calc(100vw - 50%);
+  background-color: #CCFFFE;
+  margin: 50px auto 0;
+  .eheader{
+    font-weight: 600;
+    font-size: 35px;
+    color: brown;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    border-bottom: dashed 2px #5b8bd0;
+  }
+  .ebody{
+    margin: 0 85px;
+    &__form{
+      margin: 60px 0 30px;
+      position: relative;
+      &__1{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__2{
+        border: none;
+        outline: none;
+        height: 48px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &__personal{
+        &__Height{
+          margin: 30px 0;
+          display: flex;
+          justify-content: space-between;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+          &__2{
+            border: none;
+            outline: none;
+
+           
+          }
+        }
+        &__Weight{
+          margin-bottom: 30px;
+          display: flex;
+          justify-content: space-between;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+          &__2{
+            border: none;
+          outline: none;
+            margin-bottom: 30px;
+          }
+        }
+        &__Age{
+          margin-bottom: 30px;
+          display: flex;
+          justify-content: space-between;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+            
+          }
+          &__2{
+            border: none;
+            outline: none;
+            width: 170px;
+          }
+        }
+        &__Montly{
+
+          &__label{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+           
+          }
+          &__form{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+            margin-bottom: 70px;
+            padding-bottom: 60px;
+            &__1{
+              border: none;
+              outline: none;
+            }
+            &__2{
+            }
+            &__3{
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
