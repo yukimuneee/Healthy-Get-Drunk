@@ -15,5 +15,9 @@ class UsersController < ApplicationController
 
   private
 
+  def update_user_params
+    params.require(:user).permit(:nickname, personal_attributes: [:height, :weight, :age, :month, :monthly_drinking_money, :id])
+  end
+
 end
 
