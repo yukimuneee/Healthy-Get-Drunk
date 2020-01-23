@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get 'done',to:'users/registrations#done'
   end
 
+  resources :users, only: [:edit,:update]
+
   root to: 'posts#index'
 
   resources :posts do
@@ -17,5 +19,4 @@ Rails.application.routes.draw do
       get 'index'
     end
   end
-  resources :users, only: [:edit,:update]
 end

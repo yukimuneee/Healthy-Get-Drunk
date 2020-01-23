@@ -21,7 +21,7 @@
       Your Basic Data
     .ebody
       .ebody__form
-        = form_for(current_user) do |f|
+        = form_with(model: @user, local: true) do |f|
           = f.label :Nickame, class: "ebody__form__1"
           = f.text_field :nickname, autofocus: 'true', class: "ebody__form__2", required: true
           .ebody__form__personal
