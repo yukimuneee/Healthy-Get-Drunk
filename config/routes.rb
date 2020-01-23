@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get 'done',to:'users/registrations#done'
   end
 
-  resources :users, only: [:edit,:update]
+  resources :users, only: [:edit,:update,:destroy]
 
   root to: 'posts#index'
 
