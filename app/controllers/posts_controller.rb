@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    Tweet.create(post_params)
+    Post.create(post_params)
   end
 
   def edit
