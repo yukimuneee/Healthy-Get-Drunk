@@ -18,6 +18,7 @@
           %button#delete-comformation-btn LOG OUT
   .content-new
     .content-new__header
+      Your Latest Data
     .content-new__formbox
       = form_with(model: @post, local: true) do |f|
         .content-new__formbox__1
@@ -44,6 +45,11 @@
           = f.label :Gap_weight , class: "content-new__formbox__5__label5"
           = f.text_field :gap_weight, class: "content-new__formbox__5__form5"
           .content-new__formbox__5__unit
+            kg
+        .content-new__formbox__6
+          = f.label :average_weight , class: "content-new__formbox__6__label6"
+          = f.text_field :average_weight, class: "content-new__formbox__6__form6"
+          .content-new__formbox__6__unit
             kg
         .content-new__formbox__7
           = f.label :Impression , class: "content-new__formbox__7__label7"

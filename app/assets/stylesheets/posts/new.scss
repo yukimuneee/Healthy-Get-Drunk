@@ -1,6 +1,16 @@
 .content-new{
+  box-shadow: 0 0 8px gray;
+  border-radius: 4px;
+  width: calc(100vw - 50%);
+  background-color: #CCFFFE;
+  margin: 50px auto 0;
   &__header{
-
+    font-weight: 600;
+    font-size: 35px;
+    color: brown;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    border-bottom: dashed 2px #5b8bd0;
   }
   &__formbox{
     &__1{
@@ -8,11 +18,15 @@
       }
       &__unit{
       }
+      &__form1{
+      }
     }
     &__2{
       &__label2{
       }
       &__unit{
+      }
+      &__form2{
       }
     }
     &__3{
@@ -20,11 +34,15 @@
       }
       &__unit{
       }
+      &__form3{
+      }
     }
     &__4{
       &__label4{
       }
       &__unit{
+      }
+      &__form4{ 
       }
     }
     &__5{
@@ -32,23 +50,25 @@
       }
       &__unit{
       }
+      &__form5{
+      }
     }
     &__6{
       &__label6{
       }
       &__unit{
       }
+      &__form6{
+      }
     }
     &__7{
       &__label7{
       }
-      &__unit{
+      &__form7{
       }
     }
     &__8{
-      &__label8{
-      }
-      &__unit{
+      &__form8{ 
       }
     }
   }
