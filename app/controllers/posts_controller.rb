@@ -8,9 +8,11 @@ class PostsController < ApplicationController
   end
 
   def new
+    @tweet = Tweet.new
   end
 
   def create
+    Tweet.create(post_params)
   end
 
   def edit
@@ -22,10 +24,13 @@ class PostsController < ApplicationController
   def destroy
   end
 
-
-
   private
-    def move_to_index
+
+  def move_to_index
     redirect_to action: :first_page unless user_signed_in?
+  end
+
+  def post_params
+    params.require(:post).permit(:expence, :total_expence, :average_expence, :average_weight, :latest_weight, :gap_weight, :text).merge(user_id: current_user.id)
   end
 end
