@@ -17,4 +17,8 @@
           %button#modal-close-btn CANCEL
           %button#delete-comformation-btn LOG OUT
   .content-new
+    .content-new__header
+
     = form_with(model: @post, local: true) do |f|
+      = f.label :Expence , class: "content-new__label"
+      = f.text_field :expence
