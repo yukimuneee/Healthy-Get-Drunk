@@ -69,8 +69,8 @@
       .content1__data2__title
         .content1__data1__title__text
           Your Latest Data
-        .content1__data1__title__new
-          
+        = link_to new_post_path, class: "content1__data1__title__new", data: {turbolinks: false}  do
+          WRITE A POST
       .content1__data2__result1
         .content1__data2__result1__box
           .content1__data2__result1__box__title

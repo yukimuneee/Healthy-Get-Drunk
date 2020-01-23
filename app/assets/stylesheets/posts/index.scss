@@ -214,6 +214,8 @@
       background-color: #FFFFCC	;
       padding-bottom: 50px;
       &__title{
+        display: flex;
+        justify-content: space-between;
         height: 60px;
         border-bottom: dashed 2px #FFCC66;
         &__text{
@@ -223,6 +225,18 @@
           font-family: 'Caveat', cursive;
           font-weight: 600;
           color: brown;
+        }
+        &__new{
+          cursor: pointer;
+          text-decoration: none;
+          margin-right: 20px;
+          line-height: 60px;
+          font-size: 14px;
+          color: black;
+          &:hover{
+            color: #0095EE;
+            text-decoration: underline;
+          }
         }
       }
       &__result1{
