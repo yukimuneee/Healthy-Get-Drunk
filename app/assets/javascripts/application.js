@@ -31,6 +31,6 @@ $(function () {
   $(document).on('turbolinks:before-cache', clearCalendar);
 
   $('#calendar').fullCalendar({
-  events: '/posts.json'
+  posts: '/posts.json'
   });
 });

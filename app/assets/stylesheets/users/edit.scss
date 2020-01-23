@@ -1,0 +1,179 @@
+.content-edit{
+  box-shadow: 0 0 8px gray;
+  border-radius: 4px;
+  width: calc(100vw - 50%);
+  background-color: #CCFFFE;
+  margin: 50px auto 0;
+  .eheader{
+    font-weight: 600;
+    font-size: 35px;
+    color: brown;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    border-bottom: dashed 2px #5b8bd0;
+  }
+  .ebody{
+    margin: 0 85px;
+    &__form{
+      margin-top: 60px;
+      padding-bottom: 100px;
+      position: relative;
+      &__1{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__2{
+        width: 198px;
+        padding-left: 10px;
+        font-size: 20px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        height: 48px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &__personal{
+        &__Height{
+          margin: 30px 0;
+          display: flex;
+          justify-content: space-between;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+          &__2{
+            padding-left: 10px;
+            margin-left: 260px;
+            width: 160px;
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+          }
+          &__unit{
+            text-align: center;
+            width: 48px;
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+        }
+        &__Weight{
+          margin-bottom: 30px;
+          display: flex;
+          justify-content: space-between;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+          &__2{
+            padding-left: 10px;
+            margin-left: 260px;
+            width: 160px;
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+          }
+          &__unit{
+            text-align: center;
+            width: 48px;
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+        }
+        &__Age{
+          margin-bottom: 30px;
+          display: flex;
+          justify-content: space-between;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+            
+          }
+          &__2{
+            margin-left: 277px;
+            background-color: white;
+            width: 80px;
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+          }
+          &__unit{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+        }
+        &__Month{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          &__label{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+          }
+          &__form{
+            background-color: white;
+            width: 208px;
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+          }
+        }
+        &__Monthly{
+          height: 48px;
+          margin-bottom: 70px;
+          display: flex;
+          justify-content: flex-end;
+          &__1{
+            font-family: 'Caveat', cursive;
+            font-size: 35px;
+            line-height: 48px;
+            margin-right: 10px;
+          }
+          &__2{
+            width: 170px;
+            padding-left: 10px;
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      &__button{
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        &__send{
+          display: block;
+          font-size: 20px;
+          height: 48px;
+          width: 170px;
+          color: white;
+          background-color: #0095EE;
+          cursor: pointer;
+        }
+        &__destroy{
+          text-decoration: none;
+          line-height: 48px;
+          text-align: center;
+          font-size: 20px;
+          height: 48px;
+          width: 170px;
+          color: white;
+          background-color: #0095EE;
+          cursor: pointer;
+          &:hover{
+            color: black;
+            background-color: red;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

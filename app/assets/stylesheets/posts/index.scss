@@ -1,17 +1,19 @@
 .main{
+  padding-bottom: 50px;
+  background-color: #EEEEEE;
   .header{
     height: 80px;
     width: 100vw;
-    background-color: #EEEEEE;
     font-size: 16px;
     font-weight: 500;
     box-shadow:0px -8px 8px -1px #ccc inset;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
     &__title{
       text-decoration: none;
       font-weight: 600;
-      margin: 17px 0 23px 50px;
+      position: absolute;
+      top: 17px;
+      left: 50px;
       line-height: 40px;
       font-family: 'Caveat', cursive;
       font-size: 30px;
@@ -21,26 +23,26 @@
       color: black;
     }
     &__search{
-      line-height: 80px;
+      margin: 0px auto;
       position: relative;
+      line-height: 80px;
       width: calc(100vw - 55%);
       &__form{
-        position: relative;
         width: 100%;
         background-color: rgb(245,245,245);
         font-size: 16px;
         height: 40px;
+        padding-left: 10px;
         line-height: 1.4em;
         border-radius: 4px;
         border: none;
         outline: none;
-        padding: 0px 0px 0px 10px;
         transition: all 0.3s ease-out 0s;
         box-shadow: 0 0 8px gray;
       }
       &__button{
         position: absolute;
-        right: -10px;
+        right: 0px;
         top: 20px;  
         background-color: transparent;
         cursor: pointer;
@@ -59,7 +61,9 @@
         padding: 8px;
         text-decoration: none;
         text-align: center;
-        margin: 22px 40px 22px 0px;
+        position: absolute;
+        top: 22px;
+        right: 40px;
         border: solid 0.5px #CCCCCC;
         border-radius: 5px;
         background-color: #AAAAAA;
@@ -93,6 +97,7 @@
         }
         &__edit{
           cursor: pointer;
+          text-decoration: none;
           margin-right: 20px;
           line-height: 60px;
           font-size: 14px;
@@ -289,8 +294,11 @@
 
 
   .content2{
-    padding: 100px;
-    background-color: lightgoldenrodyellow;
+    margin: 40px 60px 0;
+    padding: 60px 100px 80px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 8px gray;
   }
 
 }
