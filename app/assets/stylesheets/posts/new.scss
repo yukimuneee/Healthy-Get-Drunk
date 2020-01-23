@@ -2,7 +2,7 @@
   box-shadow: 0 0 8px gray;
   border-radius: 4px;
   width: calc(100vw - 50%);
-  background-color: #CCFFFE;
+  background-color: #FFFFCC	;
   margin: 50px auto 0;
   &__header{
     font-weight: 600;
@@ -10,11 +10,15 @@
     color: brown;
     font-family: 'Caveat', cursive;
     text-align: center;
-    border-bottom: dashed 2px #5b8bd0;
+    border-bottom: dashed 2px  #FFCC66;
   }
   &__formbox{
+    margin: 50px 85px 0;
     &__1{
+      display: flex;
       &__label1{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__unit{
       }
@@ -22,7 +26,10 @@
       }
     }
     &__2{
+      display: flex;
       &__label2{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__unit{
       }
@@ -30,7 +37,10 @@
       }
     }
     &__3{
+      display: flex;
       &__label3{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__unit{
       }
@@ -38,7 +48,10 @@
       }
     }
     &__4{
+      display: flex;
       &__label4{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__unit{
       }
@@ -46,7 +59,10 @@
       }
     }
     &__5{
+      display: flex;
       &__label5{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__unit{
       }
@@ -54,7 +70,10 @@
       }
     }
     &__6{
+      display: flex;
       &__label6{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__unit{
       }
@@ -63,11 +82,17 @@
     }
     &__7{
       &__label7{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
       }
       &__form7{
+        width: 100%;
+        display: block;
       }
     }
     &__8{
+      font-family: 'Caveat', cursive;
+      font-size: 30px;
       &__form8{ 
       }
     }
