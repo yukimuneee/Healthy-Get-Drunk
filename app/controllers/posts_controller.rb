@@ -14,15 +14,13 @@ class PostsController < ApplicationController
   def create
     Post.create(post_params)
   end
-
-  def edit
-  end
-
-  def update
+  
+  def test
   end
 
   def destroy
   end
+
 
   private
 
