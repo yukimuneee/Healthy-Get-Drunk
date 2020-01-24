@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 2020_01_18_043619) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "expence", null: false
-    t.integer "total_expence", null: false
-    t.float "average_expence", null: false
-    t.float "average_weight", null: false
+    t.integer "total_expence"
+    t.float "average_expence"
+    t.float "average_weight"
     t.float "latest_weight", null: false
-    t.float "gap_weight", null: false
+    t.float "gap_weight"
     t.string "text"
     t.integer "user_id"
     t.datetime "created_at", null: false
