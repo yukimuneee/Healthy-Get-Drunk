@@ -24,13 +24,20 @@
         font-size: 30px;
       }
       &__unit{
+        margin-left: 230px;
         line-height: 48px;
         text-align: center;
         font-family: 'Caveat', cursive;
         font-size: 35px;
       }
       &__form1{
+        width: 170px;
+        padding-left: 10px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
       }
     }
     &__2{
@@ -42,6 +49,7 @@
         font-size: 30px;
       }
       &__unit{
+        margin-left: 170px;
         line-height: 48px;
         text-align: center;
         font-family: 'Caveat', cursive;
@@ -49,8 +57,13 @@
 
       }
       &__form2{
-        border: none;
+        width: 170px;
+        padding-left: 10px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
       }
     }
     &__3{
@@ -62,14 +75,20 @@
         font-size: 30px;
       }
       &__unit{
+        margin-left: 140px;
         line-height: 48px;
         text-align: center;
         font-family: 'Caveat', cursive;
         font-size: 35px;
       }
       &__form3{
-        border: none;
+        width: 170px;
+        padding-left: 10px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
       }
     }
     &__4{
@@ -87,8 +106,14 @@
         font-size: 30px;
       }
       &__form4{ 
-        border: none;
+        margin-left: 180px;
+        padding-left: 10px;
+        width: 160px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
       }
     }
     &__5{
@@ -106,8 +131,14 @@
         font-size: 30px;
       }
       &__form5{
-        border: none;
+        margin-left: 200px;
+        padding-left: 10px;
+        width: 160px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
       }
     }
     &__6{
@@ -125,27 +156,54 @@
         font-size: 30px;
       }
       &__form6{
-        border: none;
+        margin-left: 160px;
+        padding-left: 10px;
+        width: 160px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
       }
     }
     &__7{
       margin-bottom: 30px;
       &__label7{
+        display: block;
+        margin-bottom: 20px;
         font-family: 'Caveat', cursive;
         font-size: 30px;
       }
       &__form7{
-        border: none;
+        max-width: 100%;
+        box-sizing: border-box;
+        min-width: 100%;
+        padding: 15px;
+        height: 216px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
         outline: none;
+        border: none;
         width: 100%;
         display: block;
       }
     }
     &__8{
-      font-family: 'Caveat', cursive;
       font-size: 30px;
-      &__form8{ 
+      &__form8{
+        margin: 50px auto;
+        display: block;
+        font-size: 20px;
+        height: 48px;
+        width: 170px;
+        color: white;
+        background-color: #aaaaaa;
+        cursor: pointer;
+        &:hover{
+          color: black;
+          background-color: #FF6666;
+        }
       }
     }
   }
