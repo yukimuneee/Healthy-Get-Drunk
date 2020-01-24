@@ -15,6 +15,23 @@
   &__formbox{
     margin: 50px 85px 0;
     padding-bottom: 100px;
+    &__date{
+      margin-bottom: 30px;
+      &__label1{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      select#post_date_1i{
+        height: 48px;
+      }
+      select#post_date_2i{
+        height: 48px;
+      }
+      select#post_date_3i{
+        height: 48px;
+      }
+
+    }
     &__1{
       margin-bottom: 30px;
       display: flex;
