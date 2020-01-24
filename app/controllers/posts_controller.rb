@@ -1,14 +1,51 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:first_page]
 
-  def index 
-  end
-
   def first_page
   end
 
+  def index 
+    @post = current_user.posts.last
+  end
+
+  def new
+    @post = Post.new
+    gon.total_m = current_user.posts.sum(:expence)
+    gon.number_m = current_user.posts.count(:expence)
+    gon.total_w = current_user.posts.sum(:latest_weight)
+    gon.number_w = current_user.posts.count(:latest_weight)
+    @last_time_w = current_user.posts.last
+    if @last_time_w.nil?
+      @last_time_w = current_user.personal.weight
+      gon.last_time_w = @last_time_w
+    else
+      gon.last_time_w = @last_time_w.latest_weight
+    end
+  end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      redirect_to new_post_path,data: { turbolinks: false }
+    end
+  end
+
+  def show
+  end
+
+  def destroy
+  end
+
+
   private
-    def move_to_index
+
+  def move_to_index
     redirect_to action: :first_page unless user_signed_in?
+  end
+
+  def post_params
+    params.require(:post).permit(:date, :expence, :total_expence, :average_expence, :average_weight, :latest_weight, :gap_weight, :text).merge(user_id: current_user.id)
   end
 end

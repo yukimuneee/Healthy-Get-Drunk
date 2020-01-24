@@ -1,13 +1,14 @@
 class CreatePosts < ActiveRecord::Migration[5.2]
   def change
     create_table :posts do |t|
+      t.datetime    :date, null: false
       t.integer     :expence, null: false
-      t.integer     :total_expence, null: false
-      t.integer     :average_expence, null: false
-      t.integer     :average_weight, null: false
-      t.integer     :latest_weight , null: false
-      t.integer     :gap_weight, null: false
-      t.integer     :text 
+      t.integer     :total_expence
+      t.float       :average_expence
+      t.float       :average_weight
+      t.float       :latest_weight, null: false
+      t.float       :gap_weight
+      t.string      :text 
       t.integer     :user_id, foreign_key: true
       t.timestamps
     end

@@ -1,0 +1,250 @@
+.content-new{
+  box-shadow: 0 0 8px gray;
+  border-radius: 4px;
+  width: calc(100vw - 50%);
+  background-color: #FFFFCC	;
+  margin: 50px auto 0;
+  &__header{
+    font-weight: 600;
+    font-size: 35px;
+    color: brown;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    border-bottom: dashed 2px  #FFCC66;
+  }
+  &__formbox{
+    margin: 50px 85px 0;
+    padding-bottom: 100px;
+    &__date{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      &__label1{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__from{
+      }
+      select#post_date_1i{
+        width: 65px;
+        background-color: white;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        height: 48px;
+        vertical-align: top;
+      }
+      select#post_date_2i{
+        background-color: white;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        height: 48px;
+        vertical-align: top;
+      }
+      select#post_date_3i{
+        width: 43px;
+        background-color: white;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        height: 48px;
+        vertical-align: top;
+      }
+      
+
+    }
+    &__1{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label1{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__unit{
+        margin-left: 230px;
+        line-height: 48px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 35px;
+      }
+      &__form1{
+        width: 170px;
+        padding-left: 10px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+      }
+    }
+    &__2{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label2{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__unit{
+        margin-left: 170px;
+        line-height: 48px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 35px;
+
+      }
+      &__form2{
+        width: 170px;
+        padding-left: 10px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+      }
+    }
+    &__3{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label3{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__unit{
+        margin-left: 140px;
+        line-height: 48px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 35px;
+      }
+      &__form3{
+        width: 170px;
+        padding-left: 10px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+      }
+    }
+    &__4{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label4{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__unit{
+        line-height: 48px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__form4{ 
+        margin-left: 180px;
+        padding-left: 10px;
+        width: 160px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+      }
+    }
+    &__5{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label5{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__unit{
+        line-height: 48px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__form5{
+        margin-right: 8px;
+        height: 48px;
+        padding-left: 10px;
+        width: 160px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+      }
+    }
+    &__6{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label6{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__unit{
+        line-height: 48px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__form6{
+        margin-left: 160px;
+        padding-left: 10px;
+        width: 160px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+      }
+    }
+    &__7{
+      margin-bottom: 30px;
+      &__label7{
+        display: block;
+        margin-bottom: 20px;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__form7{
+        max-width: 100%;
+        box-sizing: border-box;
+        min-width: 100%;
+        padding: 15px;
+        height: 216px;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+        width: 100%;
+        display: block;
+      }
+    }
+    &__8{
+      font-size: 30px;
+      &__form8{
+        margin: 50px auto;
+        display: block;
+        font-size: 20px;
+        height: 48px;
+        width: 170px;
+        color: white;
+        background-color: #aaaaaa;
+        cursor: pointer;
+        &:hover{
+          color: black;
+          background-color: #FF6666;
+        }
+      }
+    }
+  }
+}

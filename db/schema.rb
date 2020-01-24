@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 2020_01_18_043619) do
 
   create_table "personals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "height", null: false
-    t.string "weight", null: false
+    t.float "height", null: false
+    t.float "weight", null: false
     t.integer "age", null: false
     t.string "month", null: false
-    t.string "monthly_drinking_money", null: false
+    t.integer "monthly_drinking_money", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,13 +25,14 @@ ActiveRecord::Schema.define(version: 2020_01_18_043619) do
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "date", null: false
     t.integer "expence", null: false
-    t.integer "total_expence", null: false
-    t.integer "average_expence", null: false
-    t.integer "average_weight", null: false
-    t.integer "latest_weight", null: false
-    t.integer "gap_weight", null: false
-    t.integer "text"
+    t.integer "total_expence"
+    t.float "average_expence"
+    t.float "average_weight"
+    t.float "latest_weight", null: false
+    t.float "gap_weight"
+    t.string "text"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
