@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get 'first_page'
-      get 'test'
+      get 'show'
     end
   end
 end

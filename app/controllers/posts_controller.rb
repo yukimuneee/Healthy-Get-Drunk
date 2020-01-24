@@ -14,8 +14,8 @@ class PostsController < ApplicationController
   def create
     Post.create(post_params)
   end
-  
-  def test
+
+  def show
   end
 
   def destroy
