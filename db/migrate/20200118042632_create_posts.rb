@@ -1,6 +1,7 @@
 class CreatePosts < ActiveRecord::Migration[5.2]
   def change
     create_table :posts do |t|
+      t.datetime    :date, null: false
       t.integer     :expence, null: false
       t.integer     :total_expence
       t.float       :average_expence
