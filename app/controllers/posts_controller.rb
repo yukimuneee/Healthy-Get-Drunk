@@ -9,13 +9,12 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @total_m = current_user.posts.sum(:expence)
-    @number_m = current_user.posts.count(:expence)
-    @total_w = current_user.posts.sum(:latest_weight)
-    @number_w = current_user.posts.count(:latest_weight)
+    gon.total_m = current_user.posts.sum(:expence)
+    gon.number_m = current_user.posts.count(:expence)
+    gon.total_w = current_user.posts.sum(:latest_weight)
+    gon.number_w = current_user.posts.count(:latest_weight)
     @last_time_w = current_user.posts.last
-    @last_time_w = @last_time_w.latest_weight
-    binding.pry
+    gon.last_time_w = @last_time_w.latest_weight
   end
 
   def create
