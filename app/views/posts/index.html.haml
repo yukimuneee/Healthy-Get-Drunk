@@ -75,36 +75,64 @@
         .content1__data2__result1__box
           .content1__data2__result1__box__title
             Latest Weight
-          .content1__data2__result1__box__value
-            .content1__data2__result1__box__value__variable
-              70
-            .content1__data2__result1__box__value__unit
-              kg
+          - if @post.nil?
+            .content1__data2__result1__box__value
+              .content1__data2__result1__box__value__variable
+                ???
+              .content1__data2__result1__box__value__unit
+                kg
+          - else
+            .content1__data2__result1__box__value
+              .content1__data2__result1__box__value__variable
+                = @post.latest_weight
+              .content1__data2__result1__box__value__unit
+                kg
         .content1__data2__result1__box
           .content1__data2__result1__box__title
             Average Weight
-          .content1__data2__result1__box__value
-            .content1__data2__result1__box__value__variable
-              70
-            .content1__data2__result1__box__value__unit
-              kg
+          - if @post.nil?
+            .content1__data2__result1__box__value
+              .content1__data2__result1__box__value__variable
+                ???
+              .content1__data2__result1__box__value__unit
+                kg
+          - else
+            .content1__data2__result1__box__value
+              .content1__data2__result1__box__value__variable
+                = @post.average_weight
+              .content1__data2__result1__box__value__unit
+                kg
       .content1__data2__result2
         .content1__data2__result2__box
           .content1__data2__result2__box__title
             Rest Of Drinking Money
-          .content1__data2__result2__box__value
-            .content1__data2__result2__box__value__variable
-              ¥
-            .content1__data2__result2__box__value__unit
-              2000
+          - if @post.nil?
+            .content1__data2__result2__box__value
+              .content1__data2__result2__box__value__variable
+                ¥
+              .content1__data2__result2__box__value__unit
+                ???
+          - else
+            .content1__data2__result2__box__value
+              .content1__data2__result2__box__value__variable
+                ¥
+              .content1__data2__result2__box__value__unit
+                = @post.total_expence
         .content1__data2__result2__box
           .content1__data2__result2__box__title
             Average Drinking Money
-          .content1__data2__result2__box__value
-            .content1__data2__result2__box__value__variable
-              ¥
-            .content1__data2__result2__box__value__unit
-              2000
+          - if @post.nil?
+            .content1__data2__result2__box__value
+              .content1__data2__result2__box__value__variable
+                ¥
+              .content1__data2__result2__box__value__unit
+                ???
+          - else
+            .content1__data2__result2__box__value
+              .content1__data2__result2__box__value__variable
+                ¥
+              .content1__data2__result2__box__value__unit
+                = @post.average_expence
 
   .content2
     #calendar

@@ -25,7 +25,7 @@ $(function(){
     }
   });
   $('#weight').on('input',function(){
-    var value = $(this).val();
+    var value = $(this).val() -0||0;
     var gap = gon.last_time_w;
     var n = 2;
     if(value < 0){
@@ -37,7 +37,7 @@ $(function(){
     }
   });
   $('#weight').on('input',function(){
-    var value = $(this).val();
+    var value = $(this).val() -0||0;
     var total = gon.total_w;
     var number = gon.number_w;
     var n = 2;

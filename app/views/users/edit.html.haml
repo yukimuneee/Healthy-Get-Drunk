@@ -50,4 +50,4 @@
               = p.text_field :monthly_drinking_money, class: "ebody__form__personal__Monthly__2", required: true
           .ebody__form__button
             = f.submit 'change', class: 'ebody__form__button__send'
-            = link_to 'Withdraw', "/users/current_user.id}", method: :delete, class: 'ebody__form__button__destroy', data: {turbolinks: false}
+            = link_to 'Withdraw', "/users/current_user.id}", method: :delete, class: 'ebody__form__button__destroy', data: {turbolinks: false,confirm: "Do you really want to withdraw?"}

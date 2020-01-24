@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def index 
+    @post = current_user.posts.last
   end
 
   def new
@@ -14,7 +15,12 @@ class PostsController < ApplicationController
     gon.total_w = current_user.posts.sum(:latest_weight)
     gon.number_w = current_user.posts.count(:latest_weight)
     @last_time_w = current_user.posts.last
-    gon.last_time_w = @last_time_w.latest_weight
+    if @last_time_w.nil?
+      @last_time_w = current_user.personal.weight
+      gon.last_time_w = @last_time_w
+    else
+      gon.last_time_w = @last_time_w.latest_weight
+    end
   end
 
   def create
