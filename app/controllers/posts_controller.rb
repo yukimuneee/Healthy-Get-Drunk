@@ -9,7 +9,10 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @posts = Post.all
+    @latest_weight = Post.select(:latest_weight)
+    @total_m = Post.all.sum(:expence)
+    binding.pry
+
   end
 
   def create
