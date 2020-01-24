@@ -29,30 +29,30 @@
           = f.label :Expence , class: "content-new__formbox__1__label1"
           .content-new__formbox__1__unit
             ¥
-          = f.text_field :expence, class: "content-new__formbox__1__form1"
+          = f.text_field :expence, id: "money", class: "content-new__formbox__1__form1"
         .content-new__formbox__2
           = f.label :Total_expence , class: "content-new__formbox__2__label2"
           .content-new__formbox__2__unit
             ¥
-          = f.text_field :total_expence,readonly: true, class: "content-new__formbox__2__form2"
+          = f.text_field :total_expence, readonly: true, id: "total", class: "content-new__formbox__2__form2"
         .content-new__formbox__3
           = f.label :Average_expence , class: "content-new__formbox__3__label3"
           .content-new__formbox__3__unit
             ¥
-          = f.text_field :average_expence,readonly: true, class: "content-new__formbox__3__form3"
+          = f.text_field :average_expence,readonly: true, id: "average1", class: "content-new__formbox__3__form3"
         .content-new__formbox__4
           = f.label :Latest_weight , class: "content-new__formbox__4__label4"
-          = f.text_field :latest_weight, class: "content-new__formbox__4__form4"
+          = f.text_field :latest_weight, id: "weight", class: "content-new__formbox__4__form4"
           .content-new__formbox__4__unit
             kg
         .content-new__formbox__5
           = f.label :Weight_difference_from_last_time , class: "content-new__formbox__5__label5"
-          = f.text_field :gap_weight,readonly: true, class: "content-new__formbox__5__form5"
+          = f.text_field :gap_weight,readonly: true, id: "gap", class: "content-new__formbox__5__form5"
           .content-new__formbox__5__unit
             kg
         .content-new__formbox__6
           = f.label :average_weight , class: "content-new__formbox__6__label6"
-          = f.text_field :average_weight,readonly: true, class: "content-new__formbox__6__form6"
+          = f.text_field :average_weight,readonly: true, id: "average2", class: "content-new__formbox__6__form6"
           .content-new__formbox__6__unit
             kg
         .content-new__formbox__7
