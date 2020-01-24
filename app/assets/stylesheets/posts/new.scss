@@ -16,20 +16,42 @@
     margin: 50px 85px 0;
     padding-bottom: 100px;
     &__date{
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 30px;
       &__label1{
         font-family: 'Caveat', cursive;
         font-size: 30px;
       }
+      &__from{
+      }
       select#post_date_1i{
+        width: 65px;
+        background-color: white;
+        border-radius: 4px;
+        outline: none;
+        border: none;
         height: 48px;
+        vertical-align: top;
       }
       select#post_date_2i{
+        background-color: white;
+        border-radius: 4px;
+        outline: none;
+        border: none;
         height: 48px;
+        vertical-align: top;
       }
       select#post_date_3i{
+        width: 43px;
+        background-color: white;
+        border-radius: 4px;
+        outline: none;
+        border: none;
         height: 48px;
+        vertical-align: top;
       }
+      
 
     }
     &__1{
