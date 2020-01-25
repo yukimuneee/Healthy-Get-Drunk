@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def index 
+    post = current_user.posts.current_month
     @post = current_user.posts.last
   end
 
@@ -29,7 +30,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path
     else
-      redirect_to new_post_path,data: { turbolinks: false }
+      redirect_to new_post_path,　data: { turbolinks: false }
     end
   end
 

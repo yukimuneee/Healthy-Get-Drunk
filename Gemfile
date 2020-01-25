@@ -67,6 +67,5 @@ gem "font-awesome-sass"
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'recaptcha', require: "recaptcha/rails"
-gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'gon'

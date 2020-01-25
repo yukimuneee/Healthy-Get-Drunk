@@ -12,25 +12,9 @@
 //
 //= require jquery 
 //= require moment
-//= require fullcalendar
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 
-$(function () {
-    function eventCalendar() {
-        return $('#calendar').fullCalendar({});
-    };
-    function clearCalendar() {
-        $('#calendar').html('');
-    };
-    $(document).on('turbolinks:load', function () {
-    eventCalendar();
-    });
-    $(document).on('turbolinks:before-cache', clearCalendar);
 
-    $('#calendar').fullCalendar({
-      events: '/posts.json'
-    });
-});

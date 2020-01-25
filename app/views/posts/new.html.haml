@@ -1,21 +1,5 @@
 .main
-  .header
-    = link_to root_path, class: "header__title", data: {turbolinks: false}  do
-      My Sake Diary
-    = form_with(url: root_path, local: true, method: :get, class: "header__search") do |f|
-      = f.text_field :keyword, class: "header__search__form"
-      %button.header__search__button
-        %i.fas.fa-search
-    .header__button
-      %button#modal-open-btn LOG OUT
-      = link_to "", destroy_user_session_path, method: :delete, id: 'item-delete-btn'
-      #overlay
-        #modalWindow
-          .modal-message-box
-            %div confirmation 
-            %div Are you sure you want to log out?
-          %button#modal-close-btn CANCEL
-          %button#delete-comformation-btn LOG OUT
+  = render 'header'
   .content-new
     .content-new__header
       Your Latest Data
