@@ -1,5 +1,5 @@
-json.array!(@posts) do |event|
+json.array!(@posts) do |post|
   json.extract! post, :id, :expence
   json.start post.date     
-  json.url event_url(post, format: :html) 
+  json.url post_url(post, format: :html) 
 end

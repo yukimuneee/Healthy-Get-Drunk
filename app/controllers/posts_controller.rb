@@ -10,11 +10,12 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    gon.total_m = current_user.posts.sum(:expence)
-    gon.number_m = current_user.posts.count(:expence)
-    gon.total_w = current_user.posts.sum(:latest_weight)
-    gon.number_w = current_user.posts.count(:latest_weight)
-    @last_time_w = current_user.posts.last
+    post = current_user.posts.current_month
+    gon.total_m = post.sum(:expence)
+    gon.number_m = post.count(:expence)
+    gon.total_w = post.sum(:latest_weight)
+    gon.number_w = post.count(:latest_weight)
+    @last_time_w = post.last
     if @last_time_w.nil?
       @last_time_w = current_user.personal.weight
       gon.last_time_w = @last_time_w
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
+  def show1
   end
 
   def destroy

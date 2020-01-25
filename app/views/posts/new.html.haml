@@ -22,7 +22,7 @@
     .content-new__formbox
       = form_with(model: @post, local: true) do |f|
         .content-new__formbox__date
-          = f.label :Date , class: "content-new__formbox__date__label1"
+          = f.label :Today , class: "content-new__formbox__date__label1"
           .content-new__formbox__date__form
             = f.date_select :date
         .content-new__formbox__1
@@ -31,12 +31,12 @@
             ¥
           = f.text_field :expence, id: "money", class: "content-new__formbox__1__form1"
         .content-new__formbox__2
-          = f.label :Total_expence , class: "content-new__formbox__2__label2"
+          = f.label :Total_expence_this_month , class: "content-new__formbox__2__label2"
           .content-new__formbox__2__unit
             ¥
           = f.text_field :total_expence,value:"-----", readonly: true, id: "total", class: "content-new__formbox__2__form2"
         .content-new__formbox__3
-          = f.label :Average_expence , class: "content-new__formbox__3__label3"
+          = f.label :Average_expence_this_month , class: "content-new__formbox__3__label3"
           .content-new__formbox__3__unit
             ¥
           = f.text_field :average_expence,value:"-----",readonly: true, id: "average1", class: "content-new__formbox__3__form3"
@@ -51,7 +51,7 @@
           .content-new__formbox__5__unit
             kg
         .content-new__formbox__6
-          = f.label :average_weight , class: "content-new__formbox__6__label6"
+          = f.label :average_weight_this_month, class: "content-new__formbox__6__label6"
           = f.text_field :average_weight,value:"-----",readonly: true, id: "average2", class: "content-new__formbox__6__form6"
           .content-new__formbox__6__unit
             kg
