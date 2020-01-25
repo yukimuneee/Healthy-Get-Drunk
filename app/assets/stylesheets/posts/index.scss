@@ -312,7 +312,7 @@
 
   .content2{
     margin: 40px 60px 0;
-    padding: 60px 100px 80px;
+    padding: 60px 70px 80px;
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 8px gray;
@@ -326,22 +326,15 @@
       color: #FF6666;
       position: relative;
       padding: 0.6em;
-      background: #e0edff;
-      &:after {
-        position: absolute;
-        content: '';
-        top: 100%;
-        left: 30px;
-        border: 15px solid transparent;
-        border-top: 15px solid #e0edff;
-        width: 0;
-        height: 0;
-      }
+      background: #99FFCC;
+      width: 550px;
+      box-shadow: 0 0 8px gray;
+      border-radius: 4px;
       &__year{
-
+        margin-right: 30px;
       }
       &__month{
-
+        margin-right: 30px;
       }
       &__title{
 
