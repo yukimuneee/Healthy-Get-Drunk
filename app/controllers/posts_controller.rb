@@ -8,6 +8,8 @@ class PostsController < ApplicationController
     d = Date.today
     @month = d.strftime("%B")
     @year = d.strftime("%Y")
+    @day = d.strftime("%m/%d")
+    @posts = current_user.posts.current_month
     @post = current_user.posts.last
   end
 
@@ -36,7 +38,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def show1
+  def show
   end
 
   def destroy

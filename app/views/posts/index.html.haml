@@ -126,6 +126,9 @@
         = @month
       .content2__header__title
         Your Data Of This Month
-    .content2__content
+    %ul.posts
+      - @posts.each do |post|
+        = render partial: "post", locals: { post: post, day: @day }
+
 
 
