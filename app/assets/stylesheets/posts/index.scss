@@ -316,6 +316,37 @@
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 8px gray;
+    &__header{
+      font-size: 30px;
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
+      display: flex;
+      justify-content: flex-start;
+      text-decoration: none;
+      color: #FF6666;
+      position: relative;
+      padding: 0.6em;
+      background: #e0edff;
+      &:after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 30px;
+        border: 15px solid transparent;
+        border-top: 15px solid #e0edff;
+        width: 0;
+        height: 0;
+      }
+      &__year{
+
+      }
+      &__month{
+
+      }
+      &__title{
+
+      }
+    }
   }
 
 }
