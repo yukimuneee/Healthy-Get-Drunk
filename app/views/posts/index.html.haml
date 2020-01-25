@@ -52,7 +52,7 @@
     .content1__data2
       .content1__data2__title
         .content1__data2__title__text
-          Your Latest Data
+          Your Latest Data Of This Month
         = link_to new_post_path, class: "content1__data2__title__new", data: {turbolinks: false}  do
           WRITE A POST
       .content1__data2__result1
@@ -119,3 +119,13 @@
                 = @post.average_expence
 
   .content2
+    .content2__header
+      .content2__header__year
+        = @year
+      .content2__header__month
+        = @month
+      .content2__header__title
+        Your Data Of This Month
+    .content2__content
+      
+
