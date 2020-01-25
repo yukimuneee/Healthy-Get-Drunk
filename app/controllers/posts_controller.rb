@@ -5,7 +5,9 @@ class PostsController < ApplicationController
   end
 
   def index 
-    post = current_user.posts.current_month
+    d = Date.today
+    @month = d.strftime("%B")
+    @year = d.strftime("%Y")
     @post = current_user.posts.last
   end
 
