@@ -51,6 +51,7 @@ class PostsController < ApplicationController
   def search
     @search_params = params[:keyword]
     @posts = Post.search(@search_params)
+    @posts_m = @posts.all.group_by{|p| p.date.strftime('%Y %m') }
   end
 
 
