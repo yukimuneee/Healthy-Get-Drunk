@@ -2,9 +2,29 @@
   = render'header'
   .content-show
     .content-show__header
-      .content-show__header__title
-        Your Data 
+      .content-show__header__title1
+        Your
       .content-show__header__date
         = @date
+      .content-show__header__title2
+        Data
+    .content-show__content
+      .content-show__content__expences
+        .content-show__content__expences__label
+          Expence
+        .content-show__content__expences__unit
+          ¥
+        .content-show__content__expences__expence
+          = @post.expence
+      .content-show__content__expences
+        .content-show__content__expences__label
+          Total expence this month
+        .content-show__content__expences__unit
+          ¥
+        .content-show__content__expences__expence
+          = @post.total_expence
+
+
+
 
     .content-show__formbox
