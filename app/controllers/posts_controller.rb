@@ -8,7 +8,6 @@ class PostsController < ApplicationController
     d = Date.today
     @month = d.strftime("%B")
     @year = d.strftime("%Y")
-    @day = d.strftime("%m/%d")
     @posts = current_user.posts.current_month
     @post = current_user.posts.last
   end
@@ -44,6 +43,15 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
+  end
+
+  def search
+    @search_params = params[:keyword]
+    @products = Product.search(@search_params)
+    @products = Product.all.limit(24).order("created_at DESC") if @products.count == 0
   end
 
 

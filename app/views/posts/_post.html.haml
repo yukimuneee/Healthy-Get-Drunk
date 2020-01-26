@@ -9,7 +9,7 @@
         Expence
     .data__box__number
       .data__box__number__day
-        = day
+        = post.date.strftime("%m/%d")
       .data__box__number__weight
         .data__box__number__weight__number
           = post.latest_weight

@@ -1,16 +1,218 @@
 .content-show{
+  box-shadow: 0 0 8px gray;
+  border-radius: 4px;
+  width: calc(100vw - 50%);
+  background-color: #FFFFCC;
+  margin: 50px auto 0;
   &__header{
-    &__title1{
-
-    }
+    font-weight: 600;
+    font-size: 35px;
+    color: brown;
+    font-family: 'Caveat', cursive;
+    border-bottom: dashed 2px  #FFCC66;
+    display: flex;
+    justify-content: center;
     &__date{
-
-    }
-    &__title2{
-
+      margin: 0 15px;
     }
   }
   &__content{
-    
+    margin: 50px 85px 0;
+    &__expences{
+      height: 48px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__right{
+        font-size: 35px;
+        display: block;
+        width: 150px;
+        color: #FF6666;
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        &__unit{
+          margin-right: 5px;
+          line-height: 44px;
+          font-family: 'Caveat', cursive;
+        }
+        &__expence{
+          font-size: 30px;
+        }
+      }
+    }
+    &__total{
+      height: 48px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__right{
+        font-size: 35px;
+        display: block;
+        width: 150px;
+        color: #FF6666;
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        &__unit{
+          margin-right: 5px;
+          line-height: 44px;
+          font-family: 'Caveat', cursive;
+        }
+        &__expence{
+          font-size: 30px;
+        }
+      }
+    }
+    &__average1{
+      height: 48px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__right{
+        font-size: 35px;
+        display: block;
+        width: 150px;
+        color: #FF6666;
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        &__unit{
+          margin-right: 5px;
+          line-height: 44px;
+          font-family: 'Caveat', cursive;
+        }
+        &__expence{
+          font-size: 30px;
+        }
+      }
+    }
+    &__weight{
+      height: 48px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__right{
+        font-size: 35px;
+        display: block;
+        width: 150px;
+        color: #FF6666;
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        &__number{
+          font-size: 30px;
+        }
+        &__unit{
+          margin-left: 5px;
+          line-height: 44px;
+          font-family: 'Caveat', cursive;
+        }
+      }
+    }
+    &__gap{
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        width: 340px;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__right{
+        font-size: 35px;
+        display: block;
+        width: 150px;
+        color: #FF6666;
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        &__number{
+          font-size: 30px;
+        }
+        &__unit{
+          margin-left: 5px;
+          line-height: 44px;
+          font-family: 'Caveat', cursive;
+        }
+      }
+    }
+    &__average2{
+      height: 48px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__label{
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__right{
+        font-size: 35px;
+        margin-bottom: 30px;
+        display: block;
+        width: 150px;
+        color: #FF6666;
+        line-height: 48px;
+        display: flex;
+        justify-content: flex-start;
+        &__number{
+          font-size: 30px;
+        }
+        &__unit{
+          line-height: 44px;
+          margin-left: 5px;
+          font-family: 'Caveat', cursive;
+        }
+      }
+    }
+    &__impression{
+      &__label{
+        height: 48px;
+        margin-bottom: 20px;
+        font-family: 'Caveat', cursive;
+        font-size: 30px;
+      }
+      &__text{
+        margin: 0 30px 50px;
+        font-size: 25px;
+      }
+    }
+  }
+  &__delete{
+    padding-bottom: 100px;
+    font-size: 30px;
+    &__button{
+      text-decoration: none;
+      margin: 50px auto;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      line-height: 48px;
+      height: 48px;
+      width: 170px;
+      color: white;
+      background-color: #aaaaaa;
+      cursor: pointer;
+      &:hover{
+        color: black;
+        background-color: red;
+      }
+    }
   }
 }
