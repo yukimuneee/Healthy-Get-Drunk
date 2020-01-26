@@ -1,5 +1,5 @@
 %li.data
-  =link_to post_path(post.id), class: "data__box" do
+  =link_to post_path(post.id), class: "data__box", data: {turbolinks: false} do
     .data__box__labels
       .data__box__labels__day
         Day
