@@ -50,8 +50,7 @@ class PostsController < ApplicationController
 
   def search
     @search_params = params[:keyword]
-    @products = Product.search(@search_params)
-    @products = Product.all.limit(24).order("created_at DESC") if @products.count == 0
+    @posts = Product.search(@search_params)
   end
 
 
