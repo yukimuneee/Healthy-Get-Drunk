@@ -39,6 +39,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @date = @post.date.strftime("%Y %B %d")
   end
 
   def destroy
