@@ -89,7 +89,7 @@
       .content1__data2__result2
         .content1__data2__result2__box
           .content1__data2__result2__box__title
-            Rest Of Drinking Money
+            Total Expence
           - if @post.nil?
             .content1__data2__result2__box__value
               .content1__data2__result2__box__value__variable
@@ -126,9 +126,13 @@
         = @month
       .content2__header__title
         Your Data Of This Month
-    %ul.posts
-      - @posts.each do |post|
-        = render partial: "post", locals: { post: post}
+    - if @posts.empty?
+      .content2__empty
+        No data for this month!!
+    - else 
+      %ul.posts
+        - @posts.each do |post|
+          = render partial: "post", locals: { post: post}
 
 
 

@@ -285,13 +285,14 @@
           height: 100%;
           padding: 15px;
           &__title{
+            margin-left: 20px;
             height: 30px;
             font-size: 25px;
           }
           &__value{
             display: flex;
             &__variable{
-              margin-left: 90px;
+              margin-left: 50px;
               margin-right: 10px;
               font-size: 25px;
               padding-top: 15px;
@@ -432,6 +433,10 @@
           }
         }
       }
+    }
+    &__empty{
+      font-size: 25px;
+      margin: 50px 0 0 20px;
     }
   }
 

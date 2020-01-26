@@ -1,0 +1,16 @@
+.main
+  = render "header"
+-if @posts.empty?
+  検索結果はありません
+- else
+  .content2
+    =link_to "", class: "content2__header" do
+      .content2__header__year
+        = @year
+      .content2__header__month
+        = @month
+      .content2__header__title
+        Your Data Of This Month
+    %ul.posts
+      - @posts.each do |post|
+        = render partial: "post", locals: { post: post}

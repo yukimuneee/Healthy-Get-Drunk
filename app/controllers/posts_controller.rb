@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     d = Date.today
     @month = d.strftime("%B")
     @year = d.strftime("%Y")
-    @posts = current_user.posts.current_month
+    @posts = current_user.posts.current_month.order("date ASC")
     @post = current_user.posts.last
   end
 
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
 
   def search
     @search_params = params[:keyword]
-    @posts = Product.search(@search_params)
+    @posts = Post.search(@search_params)
   end
 
 
