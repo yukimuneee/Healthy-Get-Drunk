@@ -5,16 +5,21 @@ class PostsController < ApplicationController
   end
 
   def index 
-    @post = current_user.posts.last
+    d = Date.today
+    @month = d.strftime("%m")
+    @year = d.strftime("%Y")
+    @posts = current_user.posts.current_month.order("date ASC")
+    @post = @posts.last
   end
 
   def new
     @post = Post.new
-    gon.total_m = current_user.posts.sum(:expence)
-    gon.number_m = current_user.posts.count(:expence)
-    gon.total_w = current_user.posts.sum(:latest_weight)
-    gon.number_w = current_user.posts.count(:latest_weight)
-    @last_time_w = current_user.posts.last
+    post = current_user.posts.current_month
+    gon.total_m = post.sum(:expence)
+    gon.number_m = post.count(:expence)
+    gon.total_w = post.sum(:latest_weight)
+    gon.number_w = post.count(:latest_weight)
+    @last_time_w = post.last
     if @last_time_w.nil?
       @last_time_w = current_user.personal.weight
       gon.last_time_w = @last_time_w
@@ -28,14 +33,26 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path
     else
-      redirect_to new_post_path,data: { turbolinks: false }
+      redirect_to new_post_path,　data: { turbolinks: false }
     end
   end
 
   def show
+    @post = Post.find(params[:id])
+    @date = @post.date.strftime("%Y %m %d")
   end
 
   def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
+  end
+
+  def search
+    @search_params1 = params[:keyword1]
+    @search_params2 = params[:keyword2]
+    @search_params = @search_params1 + '-' + @search_params2
+    @posts = Post.search(@search_params)
   end
 
 

@@ -1,21 +1,78 @@
 .main
-  .header
-    = link_to root_path, class: "header__title", data: {turbolinks: false}  do
-      My Sake Diary
-    = form_with(url: root_path, local: true, method: :get, class: "header__search") do |f|
-      = f.text_field :keyword, class: "header__search__form"
-      %button.header__search__button
-        %i.fas.fa-search
-    .header__button
-      %button#modal-open-btn LOG OUT
-      = link_to "", destroy_user_session_path, method: :delete, id: 'item-delete-btn'
-      #overlay
-        #modalWindow
-          .modal-message-box
-            %div confirmation 
-            %div Are you sure you want to log out?
-          %button#modal-close-btn CANCEL
-          %button#delete-comformation-btn LOG OUT
+  = render'header'
   .content-show
     .content-show__header
-      Your
+      .content-show__header__title1
+        Your
+      .content-show__header__date
+        = @date
+      .content-show__header__title2
+        Data
+    .content-show__content
+      .content-show__content__expences
+        .content-show__content__expences__label
+          Expence
+        .content-show__content__expences__right
+          .content-show__content__expences__right__unit
+            ¥
+          .content-show__content__expences__right__expence
+            = @post.expence
+      .content-show__content__total
+        .content-show__content__total__label
+          Total expence this month
+        .content-show__content__total__right
+          .content-show__content__total__right__unit
+            ¥
+          - if @post.total_expence.nil?
+            .content-show__content__total__right__expence
+              0
+          - else
+            .content-show__content__total__right__expence
+              = @post.total_expence
+      .content-show__content__average1
+        .content-show__content__average1__label
+          Average expence this month
+        .content-show__content__average1__right
+          .content-show__content__average1__right__unit
+            ¥
+          - if @post.average_expence.nil?
+            .content-show__content__average1__right__expence
+              0
+          - else
+            .content-show__content__average1__right__expence
+              = @post.average_expence
+      .content-show__content__weight
+        .content-show__content__weight__label
+          Latest weight
+        .content-show__content__weight__right
+          .content-show__content__weight__right__number
+            = @post.latest_weight
+          .content-show__content__weight__right__unit
+            kg
+      .content-show__content__gap
+        .content-show__content__gap__label
+          Weight difference from last time
+        .content-show__content__gap__right
+          .content-show__content__gap__right__number
+            = @post.gap_weight
+          .content-show__content__gap__right__unit
+            kg
+      .content-show__content__average2
+        .content-show__content__average2__label
+          Average weight this month
+        .content-show__content__average2__right
+          .content-show__content__average2__right__number
+            = @post.average_weight
+          .content-show__content__average2__right__unit
+            kg
+      .content-show__content__impression
+        .content-show__content__impression__label
+          Impression
+        - if @post.text.empty?
+          .content-show__content__impression__text
+            No Text
+        - else
+          .content-show__content__impression__text
+            = simple_format(@post.text)
+    .content-show__delete
+      = link_to "DELETE", post_path(@post.id), method: :delete, class: "content-show__delete__button"

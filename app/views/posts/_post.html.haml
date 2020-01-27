@@ -1,0 +1,23 @@
+%li.data
+  =link_to post_path(post.id), class: "data__box", data: {turbolinks: false} do
+    .data__box__labels
+      .data__box__labels__day
+        Day
+      .data__box__labels__weight
+        Weight
+      .data__box__labels__expence
+        Expence
+    .data__box__number
+      .data__box__number__day
+        = post.date.strftime("%m/%d")
+      .data__box__number__weight
+        .data__box__number__weight__number
+          = post.latest_weight
+        .data__box__number__weight__unit
+          kg
+      .data__box__number__expence
+        .data__box__number__expence__unit
+          ¥
+        .data__box__number__expence__number
+          = post.expence
+

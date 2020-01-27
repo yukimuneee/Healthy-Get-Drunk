@@ -70,6 +70,7 @@
         font-size: 35px;
       }
       &__form1{
+        height: 48px;
         width: 170px;
         padding-left: 10px;
         background-color: white;
@@ -88,7 +89,7 @@
         font-size: 30px;
       }
       &__unit{
-        margin-left: 170px;
+        margin-left: 35px;
         line-height: 48px;
         text-align: center;
         font-family: 'Caveat', cursive;
@@ -96,6 +97,7 @@
 
       }
       &__form2{
+        height: 48px;
         width: 170px;
         padding-left: 10px;
         background-color: white;
@@ -114,13 +116,14 @@
         font-size: 30px;
       }
       &__unit{
-        margin-left: 140px;
+        margin-left: 10px;
         line-height: 48px;
         text-align: center;
         font-family: 'Caveat', cursive;
         font-size: 35px;
       }
       &__form3{
+        height: 48px;
         width: 170px;
         padding-left: 10px;
         background-color: white;
@@ -145,6 +148,7 @@
         font-size: 30px;
       }
       &__form4{ 
+        height: 48px;
         margin-left: 180px;
         padding-left: 10px;
         width: 160px;
@@ -196,7 +200,8 @@
         font-size: 30px;
       }
       &__form6{
-        margin-left: 160px;
+        height: 48px;
+        margin-left: 20px;
         padding-left: 10px;
         width: 160px;
         background-color: white;
@@ -215,6 +220,7 @@
         font-size: 30px;
       }
       &__form7{
+        height: 48px;
         max-width: 100%;
         box-sizing: border-box;
         min-width: 100%;

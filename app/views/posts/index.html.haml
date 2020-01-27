@@ -1,21 +1,5 @@
 .main
-  .header
-    = link_to root_path, class: "header__title", data: {turbolinks: false}  do
-      My Sake Diary
-    = form_with(url: root_path, local: true, method: :get, class: "header__search") do |f|
-      = f.text_field :keyword, class: "header__search__form"
-      %button.header__search__button
-        %i.fas.fa-search
-    .header__button
-      %button#modal-open-btn LOG OUT
-      = link_to "", destroy_user_session_path, method: :delete, id: 'item-delete-btn'
-      #overlay
-        #modalWindow
-          .modal-message-box
-            %div confirmation 
-            %div Are you sure you want to log out?
-          %button#modal-close-btn CANCEL
-          %button#delete-comformation-btn LOG OUT
+  = render'header'
   .content1
     .content1__data1
       .content1__data1__title
@@ -68,7 +52,7 @@
     .content1__data2
       .content1__data2__title
         .content1__data2__title__text
-          Your Latest Data
+          Your Latest Data Of This Month
         = link_to new_post_path, class: "content1__data2__title__new", data: {turbolinks: false}  do
           WRITE A POST
       .content1__data2__result1
@@ -105,7 +89,7 @@
       .content1__data2__result2
         .content1__data2__result2__box
           .content1__data2__result2__box__title
-            Rest Of Drinking Money
+            Total Expence
           - if @post.nil?
             .content1__data2__result2__box__value
               .content1__data2__result2__box__value__variable
@@ -135,4 +119,28 @@
                 = @post.average_expence
 
   .content2
-    #calendar
+    .content2__header
+      .content2__header__left
+        .content2__header__left__year
+          = @year
+        .content2__header__left__month
+          = @month
+        .content2__header__left__title
+          Your Data Of This Month
+      = form_with(url: search_posts_path, local: true, method: :get, class: "content2__header__right") do |f|
+        .content2__header__right__title
+          Other Month
+        = f.select :keyword1, [["2019"],["2020"],["2021"],["2022"],["2023"],["2024"],["2025"]],{}, {class: 'content2__header__right__form1'}
+        = f.select :keyword2, [["01"],["02"],["03"],["04"],["05"],["06"],["07"],["08"],["09"],["10"],["11"],["12"]],{}, {class: 'content2__header__right__form2'}
+        %button.content2__header__right__button
+          %i.fas.fa-search
+    - if @posts.empty?
+      .content2__empty
+        No data for this month!!
+    - else 
+      %ul.posts
+        - @posts.each do |post|
+          = render partial: "post", locals: { post: post}
+
+
+
