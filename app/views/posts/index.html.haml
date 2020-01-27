@@ -119,20 +119,20 @@
                 = @post.average_expence
 
   .content2
-    =link_to "", class: "content2__header" do
-      .content2__header__right
-        .content2__header__right__year
+    .content2__header
+      .content2__header__left
+        .content2__header__left__year
           = @year
-        .content2__header__right__month
+        .content2__header__left__month
           = @month
-        .content2__header__right__title
+        .content2__header__left__title
           Your Data Of This Month
-      = form_with(url: search_posts_path, local: true, method: :get, class: "content2__left") do |f|
-        .content2__left__title
+      = form_with(url: search_posts_path, local: true, method: :get, class: "content2__header__right") do |f|
+        .content2__header__right__title
           Other Month
-        = f.select :keyword1, [["2019"],["2020"],["2021"],["2022"],["2023"],["2024"],["2025"]],{}, {class: 'content2__left__form1'}
-        = f.select :keyword2, [["1"],["2"],["3"],["4"],["5"],["6"],["7"],["8"],["9"],["10"],["11"],["12"]],{}, {class: 'content2__left__form2'}
-        %button.content2__left__button
+        = f.select :keyword1, [["2019"],["2020"],["2021"],["2022"],["2023"],["2024"],["2025"]],{}, {class: 'content2__header__right__form1'}
+        = f.select :keyword2, [["01"],["02"],["03"],["04"],["05"],["06"],["07"],["08"],["09"],["10"],["11"],["12"]],{}, {class: 'content2__header__right__form2'}
+        %button.content2__header__right__button
           %i.fas.fa-search
     - if @posts.empty?
       .content2__empty

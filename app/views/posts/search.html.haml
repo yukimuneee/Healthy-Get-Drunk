@@ -1,12 +1,26 @@
 .main
   = render "header"
--if @posts.empty?
-  .main__text
-    No data 
-    %br/
-    Please search again
-- else
-  .content
-    %ul.posts
-      - @posts.each do |post|
-        = render partial: "post", locals: { post: post}
+  .content2
+    .content2__header
+      .content2__header__left
+        .content2__header__left__year
+          = @search_params1
+        .content2__header__left__month
+          = @search_params2
+        .content2__header__left__title
+          Your Data Of This Month
+      = form_with(url: search_posts_path, local: true, method: :get, class: "content2__header__right") do |f|
+        .content2__header__right__title
+          Other Month
+        = f.select :keyword1, [["2019"],["2020"],["2021"],["2022"],["2023"],["2024"],["2025"]],{}, {class: 'content2__header__right__form1'}
+        = f.select :keyword2, [["01"],["02"],["03"],["04"],["05"],["06"],["07"],["08"],["09"],["10"],["11"],["12"]],{}, {class: 'content2__header__right__form2'}
+        %button.content2__header__right__button
+          %i.fas.fa-search
+    - if @posts.empty?
+      .content2__empty
+        No data for this month!!
+    - else 
+      %ul.posts
+        - @posts.each do |post|
+          = render partial: "post", locals: { post: post}
+

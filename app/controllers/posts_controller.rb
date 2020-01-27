@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def index 
     d = Date.today
-    @month = d.strftime("%B")
+    @month = d.strftime("%m")
     @year = d.strftime("%Y")
     @posts = current_user.posts.current_month.order("date ASC")
     @post = @posts.last
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @date = @post.date.strftime("%Y %B %d")
+    @date = @post.date.strftime("%Y %m %d")
   end
 
   def destroy
@@ -51,9 +51,8 @@ class PostsController < ApplicationController
   def search
     @search_params1 = params[:keyword1]
     @search_params2 = params[:keyword2]
-    @posts = Post.search(@search_params1)
-    @posts = @posts.search(@search_params2)
-    binding.pry
+    @search_params = @search_params1 + '-' + @search_params2
+    @posts = Post.search(@search_params)
   end
 
 
