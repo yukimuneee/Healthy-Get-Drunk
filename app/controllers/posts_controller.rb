@@ -49,8 +49,10 @@ class PostsController < ApplicationController
   end
 
   def search
-    @search_params = params[:keyword]
-    @posts = Post.search(@search_params)
+    @search_params1 = params[:keyword1]
+    @search_params2 = params[:keyword2]
+    @posts = Post.search(@search_params1)
+    @posts = @posts.search(@search_params2)
     binding.pry
   end
 

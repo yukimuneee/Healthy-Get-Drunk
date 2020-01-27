@@ -285,7 +285,8 @@
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 8px gray;
-    &__header{
+    display: flex;
+    &__lheader{
       font-size: 30px;
       font-family: 'Caveat', cursive;
       font-weight: 600;

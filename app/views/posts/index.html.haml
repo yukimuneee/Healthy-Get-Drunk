@@ -119,17 +119,21 @@
                 = @post.average_expence
 
   .content2
-    =link_to "", class: "content2__lheader" do
-      .content2__lheader__year
-        = @year
-      .content2__lheader__month
-        = @month
-      .content2__lheader__title
-        Your Data Of This Month
-    = form_with(url: search_posts_path, local: true, method: :get, class: "content2__rheader") do |f|
-      = f.date_select  :keyword, discard_day: true, value: @search_params, class: "content2__rheader__form"
-      %button.header__search__button
-        %i.fas.fa-search
+    =link_to "", class: "content2__header" do
+      .content2__header__right
+        .content2__header__right__year
+          = @year
+        .content2__header__right__month
+          = @month
+        .content2__header__right__title
+          Your Data Of This Month
+      = form_with(url: search_posts_path, local: true, method: :get, class: "content2__left") do |f|
+        .content2__left__title
+          Other Month
+        = f.select :keyword1, [["2019"],["2020"],["2021"],["2022"],["2023"],["2024"],["2025"]],{}, {class: 'content2__left__form1'}
+        = f.select :keyword2, [["1"],["2"],["3"],["4"],["5"],["6"],["7"],["8"],["9"],["10"],["11"],["12"]],{}, {class: 'content2__left__form2'}
+        %button.content2__left__button
+          %i.fas.fa-search
     - if @posts.empty?
       .content2__empty
         No data for this month!!
