@@ -6,14 +6,7 @@
     %br/
     Please search again
 - else
-  .content2
+  .content
     %ul.posts
-      - @posts_m.each do |post_m|
-        %li.data1
-          .data1__header
-            = post_m.date.strftime("%m%B")
-          .content2__header__title
-            Your Data 
-        %ul.posts
-          - @posts.each do |post|
-            = render partial: "post", locals: { post: post}
+      - @posts.each do |post|
+        = render partial: "post", locals: { post: post}

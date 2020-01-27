@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @month = d.strftime("%B")
     @year = d.strftime("%Y")
     @posts = current_user.posts.current_month.order("date ASC")
-    @post = current_user.posts.last
+    @post = @posts.last
   end
 
   def new
@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   def search
     @search_params = params[:keyword]
     @posts = Post.search(@search_params)
-    @posts_m = @posts.all.group_by{|p| p.date.strftime('%Y %m') }
+    binding.pry
   end
 
 
