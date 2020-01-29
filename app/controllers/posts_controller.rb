@@ -52,8 +52,7 @@ class PostsController < ApplicationController
     @search_params1 = params[:keyword1]
     @search_params2 = params[:keyword2]
     @search_params = @search_params1 + '-' + @search_params2
-    @posts = Post.search(@search_params)
-    
+    @posts = current_user.posts.search(@search_params)
   end
 
 
