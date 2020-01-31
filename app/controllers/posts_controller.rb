@@ -10,7 +10,6 @@ class PostsController < ApplicationController
     @year = d.strftime("%Y")
     @posts = current_user.posts.current_month.order("date ASC")
     @post = @posts.last
-    
   end
 
   def new
