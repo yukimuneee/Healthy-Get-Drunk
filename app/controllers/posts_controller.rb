@@ -15,7 +15,9 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     post = current_user.posts.current_month
+
     gon.total_m = post.sum(:expence)
+    
     gon.number_m = post.count(:expence)
     gon.total_w = post.sum(:latest_weight)
     gon.number_w = post.count(:latest_weight)
