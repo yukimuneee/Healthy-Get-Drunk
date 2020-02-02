@@ -26,7 +26,6 @@ class PostsController < ApplicationController
     else
       gon.last_time_w = @last_time_w.latest_weight
     end
-    
   end
 
   def create
