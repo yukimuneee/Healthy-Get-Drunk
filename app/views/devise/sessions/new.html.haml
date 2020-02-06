@@ -19,4 +19,6 @@
         = f.email_field :email, autofocus: true,class: "signin__box__content__inputbox__input",placeholder: "Mailaddress"
         = f.password_field :password, autocomplete: "off",class:"signin__box__content__inputbox__input",placeholder: "Password"
         .signin__box__content__inputbox__input
+          -# = flash[:recaptcha_error]
+          -# = recaptcha_tags
         = f.submit "LOG IN", class: "signin__box__content__inputbox__send"
