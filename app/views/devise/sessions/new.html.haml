@@ -9,11 +9,7 @@
 .signin
   .signin__head
   .signin__box
-    .signin__box__header
-      .signin__box__header__text
-        Click here if you do not have an account
-      = link_to index_path, class: "signin__box__header__button" do
-        New Member Registration
+
     .signin__box__content
       = form_with model: @user, url: user_session_path, id: 'new_user', class: 'signin__box__content__inputbox', local: true do |f|
         = f.email_field :email, autofocus: true,class: "signin__box__content__inputbox__input",placeholder: "Mailaddress"
@@ -21,4 +17,5 @@
         .signin__box__content__inputbox__input
           -# = flash[:recaptcha_error]
           -# = recaptcha_tags
+
         = f.submit "LOG IN", class: "signin__box__content__inputbox__send"
